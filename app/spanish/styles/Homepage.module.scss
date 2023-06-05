@@ -1,0 +1,38 @@
+@use "../../styles/abstracts/mixins.scss";
+@use "../../styles/abstracts/variables.scss";
+
+.main {
+  height: 100vh;
+  @include mixins.flex(column, nowrap);
+  justify-content: space-between;
+  padding: 100px 30px;
+
+  h1 {
+    font-size: clamp(2rem, 6vw, 6rem);
+    font-weight: 550;
+    text-align: center;
+  }
+
+  div {
+    text-align: center;
+
+    h2 {
+      font-size: clamp(1.4rem, 2vw, 2rem);
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: clamp(1.1rem, 2vw, 1.6rem);
+      font-weight: 300;
+    }
+  }
+}
+
+@media (min-width: 714px) {
+  .main {
+    h1 {
+      font-weight: 400;
+    }
+  }
+}

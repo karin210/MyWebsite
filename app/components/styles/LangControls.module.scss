@@ -1,0 +1,52 @@
+@use "../../styles/abstracts/mixins.scss";
+
+.form {
+  @include mixins.flex(column, nowrap);
+  align-items: center;
+  gap: 20px;
+
+  label {
+    font-size: clamp(1.3rem, 2vw, 1.9rem);
+    // text-align: center;
+  }
+
+  .buttonsBox {
+    @include mixins.flex(row, wrap);
+    // justify-content: center;
+    gap: 40px;
+  }
+
+  input {
+    @include mixins.flex(row, wrap);
+    justify-items: center;
+    align-items: center;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .enBtn::after {
+    content: "En";
+    font-size: clamp(1.1rem, 1.8vw, 1.7rem);
+    position: relative;
+    z-index: 1;
+    left: 40%;
+  }
+
+  .enBtn:checked::after {
+    text-shadow: rgb(116, 188, 255) 0.5px 0 0.5px;
+    color: rgb(54, 134, 255);
+  }
+
+  .esBtn::after {
+    content: "Es";
+    font-size: clamp(1.1rem, 1.8vw, 1.7rem);
+    position: relative;
+    z-index: 1;
+    left: 40%;
+  }
+
+  .esBtn:checked::after {
+    text-shadow: rgb(116, 188, 255) 0.5px 0 0.5px;
+    color: rgb(54, 134, 255);
+  }
+}

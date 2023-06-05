@@ -1,0 +1,1 @@
+Can't set En language as checked. app/components/LangControls.js
