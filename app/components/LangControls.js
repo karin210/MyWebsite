@@ -19,13 +19,14 @@ export default function LangControls({ handleLang }) {
     <form className={styles.form}>
       {lang === "En" ? (
         <>
-          <label htmlFor="lang">Select language</label>
+          <label className={styles.dynamic} htmlFor="lang">
+            Select language
+          </label>
           <div className={styles.buttonsBox}>
             <input
               className={styles.enBtn}
               name="lang"
               value="En"
-              // checked
               type="radio"
               onChange={handleChange}
             />
@@ -40,13 +41,14 @@ export default function LangControls({ handleLang }) {
         </>
       ) : (
         <>
-          <label htmlFor="lang">Selecciona un lenguaje</label>
+          <label className={styles.dynamic1} htmlFor="lang">
+            Selecciona un idioma
+          </label>
           <div className={styles.buttonsBox}>
             <input
               className={styles.enBtn}
               name="lang"
               value="En"
-              // checked
               type="radio"
               onChange={handleChange}
             />

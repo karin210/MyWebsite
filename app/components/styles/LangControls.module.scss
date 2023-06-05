@@ -4,15 +4,25 @@
   @include mixins.flex(column, nowrap);
   align-items: center;
   gap: 20px;
+  transition: 1s;
 
   label {
     font-size: clamp(1.3rem, 2vw, 1.9rem);
     // text-align: center;
   }
 
+  .dynamic {
+    animation-name: dynamicElements;
+    animation-duration: 1s;
+  }
+
+  .dynamic1 {
+    animation-name: dynamicElements1;
+    animation-duration: 1s;
+  }
+
   .buttonsBox {
     @include mixins.flex(row, wrap);
-    // justify-content: center;
     gap: 40px;
   }
 
@@ -48,5 +58,23 @@
   .esBtn:checked::after {
     text-shadow: rgb(116, 188, 255) 0.5px 0 0.5px;
     color: rgb(54, 134, 255);
+  }
+}
+
+@keyframes dynamicElements {
+  from {
+    color: transparent;
+  }
+  to {
+    color: black;
+  }
+}
+
+@keyframes dynamicElements1 {
+  from {
+    color: transparent;
+  }
+  to {
+    color: black;
   }
 }

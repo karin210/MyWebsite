@@ -6,11 +6,23 @@
   @include mixins.flex(column, nowrap);
   justify-content: space-between;
   padding: 100px 30px;
+  animation-name: homeStart;
+  animation-duration: 1s;
 
   h1 {
     font-size: clamp(2rem, 6vw, 6rem);
     font-weight: 550;
     text-align: center;
+  }
+
+  .dynamic1 {
+    animation-name: dynamicElements1;
+    animation-duration: 1s;
+  }
+
+  .dynamic {
+    animation-name: dynamicElements;
+    animation-duration: 1s;
   }
 
   div {
@@ -34,5 +46,32 @@
     h1 {
       font-weight: 400;
     }
+  }
+}
+
+@keyframes homeStart {
+  from {
+    color: transparent;
+  }
+  to {
+    color: black;
+  }
+}
+
+@keyframes dynamicElements {
+  from {
+    color: transparent;
+  }
+  to {
+    color: black;
+  }
+}
+
+@keyframes dynamicElements1 {
+  from {
+    color: transparent;
+  }
+  to {
+    color: black;
   }
 }

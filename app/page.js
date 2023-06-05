@@ -21,12 +21,12 @@ export default function Home() {
       <h1>Karin_Arroyo</h1>
       {lang === "En" ? (
         <div>
-          <h2>Frontend Developer</h2>
+          <h2 className={styles.dynamic1}>Frontend Developer</h2>
           <h3>Website</h3>
         </div>
       ) : (
         <div>
-          <h2>Desarrollador Frontend</h2>
+          <h2 className={styles.dynamic}>Desarrollador Frontend</h2>
           <h3>Website</h3>
         </div>
       )}
