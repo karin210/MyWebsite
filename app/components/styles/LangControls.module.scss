@@ -3,12 +3,26 @@
 .form {
   @include mixins.flex(column, nowrap);
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   transition: 1s;
 
   label {
-    font-size: clamp(1.3rem, 2vw, 1.9rem);
-    // text-align: center;
+    width: 60%;
+    max-width: 260px;
+    button {
+      width: 100%;
+      padding: 5px;
+      font-size: clamp(1.3rem, 2vw, 1.9rem);
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid transparent;
+      cursor: pointer;
+      transition: border 1s;
+    }
+
+    button:hover {
+      border-bottom: 1px solid rgb(69, 128, 238);
+    }
   }
 
   .dynamic {
@@ -21,44 +35,56 @@
     animation-duration: 1s;
   }
 
+  .hiddeLang {
+    display: none;
+  }
+
   .buttonsBox {
     @include mixins.flex(row, wrap);
     gap: 40px;
+
+    input {
+      @include mixins.flex(row, wrap);
+      justify-items: center;
+      align-items: center;
+      appearance: none;
+      cursor: pointer;
+    }
+
+    input:hover {
+      color: rgb(69, 128, 238);
+    }
+
+    input:active {
+      color: rgb(69, 128, 238);
+    }
+
+    .enBtn::after {
+      content: "En";
+      font-size: clamp(1.1rem, 1.8vw, 1.7rem);
+      position: relative;
+      z-index: 1;
+      left: 40%;
+    }
+
+    // .enBtn:checked::after {
+    //   text-shadow: rgb(116, 188, 255) 0.5px 0 0.5px;
+    //   color: rgb(54, 134, 255);
+    // }
+
+    .esBtn::after {
+      content: "Es";
+      font-size: clamp(1.1rem, 1.8vw, 1.7rem);
+      position: relative;
+      z-index: 1;
+      left: 40%;
+    }
   }
 
-  input {
-    @include mixins.flex(row, wrap);
-    justify-items: center;
-    align-items: center;
-    appearance: none;
-    cursor: pointer;
-  }
-
-  .enBtn::after {
-    content: "En";
-    font-size: clamp(1.1rem, 1.8vw, 1.7rem);
-    position: relative;
-    z-index: 1;
-    left: 40%;
-  }
-
-  .enBtn:checked::after {
-    text-shadow: rgb(116, 188, 255) 0.5px 0 0.5px;
-    color: rgb(54, 134, 255);
-  }
-
-  .esBtn::after {
-    content: "Es";
-    font-size: clamp(1.1rem, 1.8vw, 1.7rem);
-    position: relative;
-    z-index: 1;
-    left: 40%;
-  }
-
-  .esBtn:checked::after {
-    text-shadow: rgb(116, 188, 255) 0.5px 0 0.5px;
-    color: rgb(54, 134, 255);
-  }
+  // .esBtn:checked::after {
+  //   text-shadow: rgb(116, 188, 255) 0.5px 0 0.5px;
+  //   color: rgb(54, 134, 255);
+  // }
 }
 
 @keyframes dynamicElements {
