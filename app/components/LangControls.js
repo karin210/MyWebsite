@@ -12,7 +12,7 @@ export default function LangControls({ handleLang }) {
     } else {
       setLang("En");
     }
-    setShowLanguages(false);
+    setShowLanguages(!showLanguages);
   }
 
   useEffect(() => {
@@ -24,35 +24,31 @@ export default function LangControls({ handleLang }) {
     setShowLanguages(true);
   }
 
+  console.log(showLanguages);
+
   return (
-    <form className={styles.form}>
+    <form className={showLanguages ? styles.form : styles.closeForm}>
       {lang === "En" ? (
         <>
           <label htmlFor="lang">
-            <button className={styles.dynamic} onClick={handleClick}>
-              Select language
-            </button>
+            <button className={styles.dynamic}>Select language</button>
           </label>
-          {showLanguages && (
-            <div
-              className={showLanguages ? styles.buttonsBox : styles.hiddeLang}
-            >
-              <input
-                className={styles.enBtn}
-                name="lang"
-                value="En"
-                type="radio"
-                onChange={handleChange}
-              />
-              <input
-                onChange={handleChange}
-                className={styles.esBtn}
-                name="lang"
-                value="Es"
-                type="radio"
-              />
-            </div>
-          )}
+          <div className={styles.buttonsBox}>
+            <input
+              className={styles.enBtn}
+              name="lang"
+              value="En"
+              type="radio"
+              onClick={handleChange}
+            />
+            <input
+              onClick={handleChange}
+              className={styles.esBtn}
+              name="lang"
+              value="Es"
+              type="radio"
+            />
+          </div>
         </>
       ) : (
         <>
@@ -61,26 +57,23 @@ export default function LangControls({ handleLang }) {
               Selecciona un idioma
             </button>
           </label>
-          {showLanguages && (
-            <div
-              className={showLanguages ? styles.buttonsBox : styles.hiddeLang}
-            >
-              <input
-                className={styles.enBtn}
-                name="lang"
-                value="En"
-                type="radio"
-                onChange={handleChange}
-              />
-              <input
-                onChange={handleChange}
-                className={styles.esBtn}
-                name="lang"
-                value="Es"
-                type="radio"
-              />
-            </div>
-          )}
+
+          <div className={styles.buttonsBox}>
+            <input
+              className={styles.enBtn}
+              name="lang"
+              value="En"
+              type="radio"
+              onClick={handleChange}
+            />
+            <input
+              onClick={handleChange}
+              className={styles.esBtn}
+              name="lang"
+              value="Es"
+              type="radio"
+            />
+          </div>
         </>
       )}
     </form>

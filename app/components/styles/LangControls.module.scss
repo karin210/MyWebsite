@@ -67,11 +67,6 @@
       left: 40%;
     }
 
-    // .enBtn:checked::after {
-    //   text-shadow: rgb(116, 188, 255) 0.5px 0 0.5px;
-    //   color: rgb(54, 134, 255);
-    // }
-
     .esBtn::after {
       content: "Es";
       font-size: clamp(1.1rem, 1.8vw, 1.7rem);
@@ -80,23 +75,40 @@
       left: 40%;
     }
   }
-
-  // .esBtn:checked::after {
-  //   text-shadow: rgb(116, 188, 255) 0.5px 0 0.5px;
-  //   color: rgb(54, 134, 255);
-  // }
 }
 
-@keyframes dynamicElements {
-  from {
-    color: transparent;
+.closeForm {
+  label {
+    display: none;
   }
-  to {
-    color: black;
+
+  input {
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .enBtn:checked::after {
+    content: "En";
+    font-size: clamp(1.1rem, 1.8vw, 1.7rem);
+    position: relative;
+    z-index: -1;
+    left: 40%;
+    animation-name: selectedLang;
+    animation-duration: 1s;
+  }
+
+  .esBtn:checked::after {
+    content: "Es";
+    font-size: clamp(1.1rem, 1.8vw, 1.7rem);
+    position: relative;
+    z-index: -1;
+    left: 40%;
+    animation-name: selectedLang;
+    animation-duration: 1s;
   }
 }
 
-@keyframes dynamicElements1 {
+@keyframes selectedLang {
   from {
     color: transparent;
   }
