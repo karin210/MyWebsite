@@ -16,23 +16,19 @@ export default function LangControls({ handleLang }) {
   }
 
   useEffect(() => {
-    handleLang(lang);
-  }, [lang]);
+    handleLang(lang, showLanguages);
+  }, [lang, showLanguages]);
 
   function handleClick(e) {
     e.preventDefault();
     setShowLanguages(true);
   }
 
-  console.log(showLanguages);
-
   return (
     <form className={showLanguages ? styles.form : styles.closeForm}>
       {lang === "En" ? (
         <>
-          <label htmlFor="lang">
-            <button className={styles.dynamic}>Select language</button>
-          </label>
+          <label htmlFor="lang">Select language</label>
           <div className={styles.buttonsBox}>
             <input
               className={styles.enBtn}
@@ -52,11 +48,7 @@ export default function LangControls({ handleLang }) {
         </>
       ) : (
         <>
-          <label htmlFor="lang">
-            <button className={styles.dynamic1} onClick={handleClick}>
-              Selecciona un idioma
-            </button>
-          </label>
+          <label htmlFor="lang">Selecciona un idioma</label>
 
           <div className={styles.buttonsBox}>
             <input

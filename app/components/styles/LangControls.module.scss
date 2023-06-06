@@ -7,31 +7,14 @@
   transition: 1s;
 
   label {
-    width: 60%;
-    max-width: 260px;
-    button {
-      width: 100%;
-      padding: 5px;
-      font-size: clamp(1.3rem, 2vw, 1.9rem);
-      background-color: transparent;
-      border: none;
-      border-bottom: 1px solid transparent;
-      cursor: pointer;
-      transition: border 1s;
-    }
-
-    button:hover {
-      border-bottom: 1px solid rgb(69, 128, 238);
-    }
-  }
-
-  .dynamic {
-    animation-name: dynamicElements;
-    animation-duration: 1s;
-  }
-
-  .dynamic1 {
-    animation-name: dynamicElements1;
+    width: 100%;
+    max-width: 350px;
+    font-size: clamp(1.3rem, 2vw, 1.9rem);
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    animation-name: appear;
     animation-duration: 1s;
   }
 
@@ -42,6 +25,8 @@
   .buttonsBox {
     @include mixins.flex(row, wrap);
     gap: 40px;
+    animation-name: appear;
+    animation-duration: 1s;
 
     input {
       @include mixins.flex(row, wrap);
@@ -93,7 +78,7 @@
     position: relative;
     z-index: -1;
     left: 40%;
-    animation-name: selectedLang;
+    animation-name: appear;
     animation-duration: 1s;
   }
 
@@ -103,12 +88,12 @@
     position: relative;
     z-index: -1;
     left: 40%;
-    animation-name: selectedLang;
+    animation-name: appear;
     animation-duration: 1s;
   }
 }
 
-@keyframes selectedLang {
+@keyframes appear {
   from {
     color: transparent;
   }
