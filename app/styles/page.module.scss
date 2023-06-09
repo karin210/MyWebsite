@@ -1,55 +1,152 @@
 @use "./abstracts/mixins.scss";
 @use "./abstracts/variables.scss";
 
+.mainStart {
+  height: 100vh;
+  animation-name: homeStart;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
 .main {
   height: 100vh;
   @include mixins.flex(column, nowrap);
   justify-content: space-between;
-  padding: 100px 30px;
-  animation-name: homeStart;
-  animation-duration: 1s;
+  align-items: center;
+  padding: 30px;
+
+  .menuStart {
+    filter: opacity(0);
+  }
+
+  .menuBox {
+    animation-name: menuAppear;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+  }
+
+  ul {
+    width: 100%;
+    padding: clamp(20px, 10%, 100px) 0;
+    @include mixins.flex(row, wrap);
+    align-items: end;
+    justify-content: center;
+    list-style: none;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    gap: 30px;
+
+    li {
+      width: 30%;
+      max-width: 400px;
+      a {
+        width: 100%;
+        @include mixins.flex(column, nowrap);
+        align-items: center;
+
+        span {
+          font-weight: 500;
+          font-size: clamp(1rem, 2vw, 1.5rem);
+        }
+
+        .resumeTxt {
+          margin-top: -3%;
+        }
+      }
+    }
+
+    // In mobile the first menu option must be bigger
+    .menuIcon:first-of-type {
+      width: 70%;
+
+      a span {
+        font-size: clamp(1.15rem, 2vw, 1.5rem);
+      }
+    }
+
+    .menuIcon:last-of-type {
+      a {
+        gap: 12px;
+      }
+    }
+
+    li:active {
+      width: 80%;
+    }
+  }
+
+  .h1Start {
+    color: transparent;
+    animation-name: h1Start;
+    animation-duration: 2.4s;
+    animation-delay: 1.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
 
   h1 {
-    font-size: clamp(2rem, 6vw, 6rem);
+    font-size: clamp(1.15rem, 2vw, 1.9rem);
     font-weight: 550;
+    position: relative;
+    top: 4.5%;
+
     text-align: center;
   }
 
-  .dynamic1 {
-    animation-name: dynamicElements1;
+  .subheadersStart {
+    color: transparent;
+    animation-name: subheaders;
     animation-duration: 1s;
+    animation-delay: 3.3s;
+    animation-fill-mode: forwards;
   }
 
-  .dynamic {
-    animation-name: dynamicElements;
-    animation-duration: 1s;
-  }
-
-  div {
+  .subheaders {
+    height: 8%;
+    @include mixins.flex(column, nowrap);
     text-align: center;
+    position: relative;
+    top: 3%;
+    gap: 6px;
 
     h2 {
-      font-size: clamp(1.4rem, 2vw, 2rem);
+      font-size: clamp(1rem, 2vw, 1.6rem);
       font-weight: 300;
-      margin-bottom: 10px;
     }
 
     h3 {
-      font-size: clamp(1.1rem, 2vw, 1.6rem);
+      font-size: clamp(0.9rem, 2vw, 1.4rem);
       font-weight: 300;
-    }
-  }
-}
-
-@media (min-width: 714px) {
-  .main {
-    h1 {
-      font-weight: 400;
     }
   }
 }
 
 @keyframes homeStart {
+  0% {
+    background-color: rgba(0, 0, 0, 0.87);
+  }
+  70% {
+    background-color: rgba(0, 0, 0, 0.87);
+  }
+  100% {
+    background-color: rgba(230, 230, 230);
+  }
+}
+
+@keyframes h1Start {
+  0% {
+    color: rgb(233, 233, 233);
+  }
+  75% {
+    color: rgb(233, 233, 233);
+  }
+  100% {
+    color: rgb(5, 5, 5);
+  }
+}
+
+@keyframes subheaders {
   from {
     color: transparent;
   }
@@ -58,20 +155,47 @@
   }
 }
 
-@keyframes dynamicElements {
+@keyframes menuAppear {
   from {
-    color: transparent;
+    filter: opacity(0);
+    position: relative;
+    top: 10%;
   }
   to {
-    color: black;
+    filter: opacity(1);
+    position: relative;
+    top: 0%;
   }
 }
 
-@keyframes dynamicElements1 {
-  from {
-    color: transparent;
-  }
-  to {
-    color: black;
+@media (min-width: 714px) {
+  .main {
+    // In laptop screen the menu is not centered with justify-content: center
+    .menuBox {
+      width: 90%;
+      border: 2px solid lightgray;
+    }
+    .menuIcon:nth-of-type(2) {
+      div {
+        position: relative;
+        top: 14px;
+      }
+    }
+
+    .menuIcon:last-of-type {
+      div {
+        position: relative;
+        top: -3px;
+      }
+    }
+
+    h1 {
+      font-weight: 400;
+      top: 2.5%;
+    }
+
+    .subheaders {
+      top: 0;
+    }
   }
 }

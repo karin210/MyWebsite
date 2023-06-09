@@ -1,21 +1,40 @@
 @use "../../styles/abstracts/mixins.scss";
 
+.controlsStart {
+  filter: opacity(0);
+  width: 100%;
+  max-width: 500px;
+}
+
+.controlsBox {
+  width: 100%;
+  max-width: 500px;
+  animation-name: controlsAppear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
 .form {
+  width: 100%;
+  padding: clamp(15px, 5%, 35px) 0;
   @include mixins.flex(column, nowrap);
   align-items: center;
   gap: 15px;
-  transition: 1s;
+  margin: 0 auto;
+  background-color: rgb(250, 250, 250);
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  animation-name: controlsAppear;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
 
   label {
     width: 100%;
     max-width: 350px;
     font-size: clamp(1.3rem, 2vw, 1.9rem);
     text-align: center;
-    background-color: transparent;
     border: none;
     cursor: pointer;
-    animation-name: appear;
-    animation-duration: 1s;
   }
 
   .hiddeLang {
@@ -25,8 +44,6 @@
   .buttonsBox {
     @include mixins.flex(row, wrap);
     gap: 40px;
-    animation-name: appear;
-    animation-duration: 1s;
 
     input {
       @include mixins.flex(row, wrap);
@@ -49,7 +66,6 @@
       font-size: clamp(1.1rem, 1.8vw, 1.7rem);
       position: relative;
       z-index: 1;
-      left: 40%;
     }
 
     .esBtn::after {
@@ -57,14 +73,24 @@
       font-size: clamp(1.1rem, 1.8vw, 1.7rem);
       position: relative;
       z-index: 1;
-      left: 40%;
     }
   }
 }
 
 .closeForm {
+  padding: clamp(15px, 5%, 25px) 0;
+  width: 100%;
+  @include mixins.flex(column, nowrap);
+  align-items: center;
+  animation-name: LangSelected;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  gap: 15px;
+  border: 1px solid transparent;
+
   label {
-    display: none;
+    font-size: clamp(1.3rem, 2vw, 1.9rem);
+    color: transparent;
   }
 
   input {
@@ -77,9 +103,7 @@
     font-size: clamp(1.1rem, 1.8vw, 1.7rem);
     position: relative;
     z-index: -1;
-    left: 40%;
-    animation-name: appear;
-    animation-duration: 1s;
+    // left: 40px;
   }
 
   .esBtn:checked::after {
@@ -87,17 +111,39 @@
     font-size: clamp(1.1rem, 1.8vw, 1.7rem);
     position: relative;
     z-index: -1;
-    left: 40%;
-    animation-name: appear;
-    animation-duration: 1s;
+    // left: 40%;
   }
 }
 
-@keyframes appear {
+@keyframes controlsAppear {
   from {
-    color: transparent;
+    filter: opacity(0);
+    position: relative;
+    top: 10%;
   }
   to {
-    color: black;
+    filter: opacity(1);
+    position: relative;
+    top: 0%;
+  }
+}
+
+@keyframes LangSelected {
+  from {
+    filter: opacity(0);
+    position: relative;
+    top: 10%;
+  }
+  to {
+    filter: opacity(1);
+    position: relative;
+    top: 0%;
+  }
+}
+
+@media (min-width: 714px) {
+  .form {
+    gap: 25px;
+    border: 2px solid lightgray;
   }
 }

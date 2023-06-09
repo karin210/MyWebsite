@@ -5,8 +5,15 @@ import styles from "./styles/LangControls.module.scss";
 export default function LangControls({ handleLang }) {
   const [lang, setLang] = useState("En");
   const [showLanguages, setShowLanguages] = useState(true);
+  const [homeStart, setHomeStart] = useState(true);
 
-  function handleChange(e) {
+  function deleteStartAnimation() {
+    setHomeStart(false);
+  }
+
+  setTimeout(deleteStartAnimation, 4400);
+
+  function changeLang(e) {
     if (e.target.value === "Es") {
       setLang("Es");
     } else {
@@ -25,49 +32,51 @@ export default function LangControls({ handleLang }) {
   }
 
   return (
-    <form className={showLanguages ? styles.form : styles.closeForm}>
-      {lang === "En" ? (
-        <>
-          <label htmlFor="lang">Select language</label>
-          <div className={styles.buttonsBox}>
-            <input
-              className={styles.enBtn}
-              name="lang"
-              value="En"
-              type="radio"
-              onClick={handleChange}
-            />
-            <input
-              onClick={handleChange}
-              className={styles.esBtn}
-              name="lang"
-              value="Es"
-              type="radio"
-            />
-          </div>
-        </>
-      ) : (
-        <>
-          <label htmlFor="lang">Selecciona un idioma</label>
+    <div className={homeStart ? styles.controlsStart : styles.controlsBox}>
+      <form className={showLanguages ? styles.form : styles.closeForm}>
+        {lang === "En" ? (
+          <>
+            <label htmlFor="lang">Select language</label>
+            <div className={styles.buttonsBox}>
+              <input
+                className={styles.enBtn}
+                name="lang"
+                value="En"
+                type="radio"
+                onClick={changeLang}
+              />
+              <input
+                onClick={changeLang}
+                className={styles.esBtn}
+                name="lang"
+                value="Es"
+                type="radio"
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <label htmlFor="lang">Selecciona un idioma</label>
 
-          <div className={styles.buttonsBox}>
-            <input
-              className={styles.enBtn}
-              name="lang"
-              value="En"
-              type="radio"
-              onClick={handleChange}
-            />
-            <input
-              onClick={handleChange}
-              className={styles.esBtn}
-              name="lang"
-              value="Es"
-              type="radio"
-            />
-          </div>
-        </>
-      )}
-    </form>
+            <div className={styles.buttonsBox}>
+              <input
+                className={styles.enBtn}
+                name="lang"
+                value="En"
+                type="radio"
+                onClick={changeLang}
+              />
+              <input
+                onClick={changeLang}
+                className={styles.esBtn}
+                name="lang"
+                value="Es"
+                type="radio"
+              />
+            </div>
+          </>
+        )}
+      </form>
+    </div>
   );
 }
