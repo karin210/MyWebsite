@@ -34,7 +34,7 @@ export default function Home() {
       <LangControls handleLang={handleLang} />
       <ul className={homeStart ? styles.menuStart : styles.menuBox}>
         <li className={styles.menuIcon}>
-          <Link href="/bio">
+          <Link href={lang === "En" ? "/bio" : "/spanish/bio"}>
             <Player
               autoplay
               loop
@@ -50,7 +50,13 @@ export default function Home() {
           </Link>
         </li>
         <li className={styles.menuIcon}>
-          <Link href="https://onedrive.live.com/edit.aspx?resid=3E2A2F75C7CB7EC!212&ithint=file%2cdocx&ct=1686090670617&wdOrigin=OFFICECOM-WEB.MAIN.MRU">
+          <Link
+            href={
+              lang === "En"
+                ? "https://onedrive.live.com/edit.aspx?resid=3E2A2F75C7CB7EC!212&ithint=file%2cdocx&ct=1686090670617&wdOrigin=OFFICECOM-WEB.MAIN.MRU"
+                : "https://onedrive.live.com/edit.aspx?resid=3E2A2F75C7CB7EC!212&ithint=file%2cdocx&ct=1686090670617&wdOrigin=OFFICECOM-WEB.MAIN.MRU"
+            }
+          >
             <Player
               autoplay
               loop
@@ -70,7 +76,7 @@ export default function Home() {
           </Link>
         </li>
         <li className={styles.menuIcon}>
-          <Link href="/portfolio">
+          <Link href={lang === "En" ? "/portfolio" : "/spanish/portafolio"}>
             <Player
               autoplay
               loop
