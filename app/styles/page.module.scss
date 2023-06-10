@@ -2,14 +2,14 @@
 @use "./abstracts/variables.scss";
 
 .mainStart {
-  height: 100vh;
+  height: 100dvh;
   animation-name: homeStart;
   animation-duration: 5s;
   animation-fill-mode: forwards;
 }
 
 .main {
-  height: 100vh;
+  height: 100dvh;
   @include mixins.flex(column, nowrap);
   justify-content: space-between;
   align-items: center;
@@ -27,23 +27,31 @@
 
   ul {
     width: 100%;
-    padding: clamp(20px, 10%, 100px) 0;
+    height: auto;
+    // padding: clamp(20px, 10%, 100px) 0;
     @include mixins.flex(row, wrap);
     align-items: end;
     justify-content: center;
     list-style: none;
-    background-color: white;
-    border: 1px solid lightgray;
+    // background-color: white;
     border-radius: 8px;
-    gap: 30px;
+    gap: 3px;
 
     li {
-      width: 30%;
+      width: 49.5%;
       max-width: 400px;
+      height: 180px;
+      background-color: rgb(250, 250, 250);
+      border: 1px solid lightgray;
       a {
-        width: 100%;
+        width: 80%;
+        height: 100%;
+        // padding: clamp(40px, 10%, 40px) 39px;
         @include mixins.flex(column, nowrap);
         align-items: center;
+        justify-content: center;
+        // border: 1px solid;
+        margin: 0 auto;
 
         span {
           font-weight: 500;
@@ -58,15 +66,28 @@
 
     // In mobile the first menu option must be bigger
     .menuIcon:first-of-type {
-      width: 70%;
+      width: 100%;
+
+      a {
+        width: 60%;
+        margin: 0 auto;
+      }
 
       a span {
         font-size: clamp(1.15rem, 2vw, 1.5rem);
       }
     }
 
+    .menuIcon:nth-of-type(2) {
+      div {
+        position: relative;
+        top: 4px;
+      }
+    }
+
     .menuIcon:last-of-type {
       a {
+        margin-top: 3%;
         gap: 12px;
       }
     }
@@ -90,7 +111,6 @@
     font-weight: 550;
     position: relative;
     top: 4.5%;
-
     text-align: center;
   }
 
@@ -169,6 +189,11 @@
 }
 
 @media (min-width: 714px) {
+  .h1Start {
+    position: relative;
+    top: 2%;
+  }
+
   .main {
     // In laptop screen the menu is not centered with justify-content: center
     .menuBox {
@@ -191,7 +216,7 @@
 
     h1 {
       font-weight: 400;
-      top: 2.5%;
+      top: 2%;
     }
 
     .subheaders {

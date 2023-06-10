@@ -3,12 +3,10 @@
 .controlsStart {
   filter: opacity(0);
   width: 100%;
-  max-width: 500px;
 }
 
 .controlsBox {
   width: 100%;
-  max-width: 500px;
   animation-name: controlsAppear;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -142,8 +140,16 @@
 }
 
 @media (min-width: 714px) {
+  .controlsStart {
+    width: 90%;
+  }
+
+  .controlsBox {
+    width: 90%;
+  }
+
   .form {
-    gap: 25px;
+    width: 100%;
     border: 2px solid lightgray;
   }
 }

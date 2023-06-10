@@ -36,7 +36,7 @@ export default function LangControls({ handleLang }) {
       <form className={showLanguages ? styles.form : styles.closeForm}>
         {lang === "En" ? (
           <>
-            <label htmlFor="lang">Select language</label>
+            <label htmlFor="lang">Switch language</label>
             <div className={styles.buttonsBox}>
               <input
                 className={styles.enBtn}
@@ -56,7 +56,7 @@ export default function LangControls({ handleLang }) {
           </>
         ) : (
           <>
-            <label htmlFor="lang">Selecciona un idioma</label>
+            <label htmlFor="lang">Cambiar idioma</label>
 
             <div className={styles.buttonsBox}>
               <input
