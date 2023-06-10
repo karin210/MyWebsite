@@ -28,34 +28,29 @@
   ul {
     width: 100%;
     height: auto;
-    // padding: clamp(20px, 10%, 100px) 0;
     @include mixins.flex(row, wrap);
     align-items: end;
     justify-content: center;
     list-style: none;
-    // background-color: white;
     border-radius: 8px;
     gap: 3px;
 
     li {
       width: 49.5%;
-      max-width: 400px;
       height: 180px;
       background-color: rgb(250, 250, 250);
       border: 1px solid lightgray;
       a {
         width: 80%;
         height: 100%;
-        // padding: clamp(40px, 10%, 40px) 39px;
         @include mixins.flex(column, nowrap);
         align-items: center;
         justify-content: center;
-        // border: 1px solid;
         margin: 0 auto;
 
         span {
           font-weight: 500;
-          font-size: clamp(1rem, 2vw, 1.5rem);
+          font-size: clamp(1rem, 2vw, 1.8rem);
         }
 
         .resumeTxt {
@@ -74,7 +69,7 @@
       }
 
       a span {
-        font-size: clamp(1.15rem, 2vw, 1.5rem);
+        font-size: clamp(1.15rem, 2vw, 1.8rem);
       }
     }
 
@@ -189,36 +184,71 @@
 }
 
 @media (min-width: 714px) {
-  .h1Start {
-    position: relative;
-    top: 2%;
-  }
-
   .main {
+    .menuStart {
+      height: 62%;
+    }
     // In laptop screen the menu is not centered with justify-content: center
     .menuBox {
-      width: 90%;
-      border: 2px solid lightgray;
-    }
-    .menuIcon:nth-of-type(2) {
-      div {
-        position: relative;
-        top: 14px;
+      width: auto;
+      height: 62%;
+
+      li {
+        width: 28.7%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        a {
+          width: 100%;
+          padding: 0;
+          margin: 0 auto;
+        }
+      }
+
+      .menuIcon:first-of-type {
+        width: 32%;
+        a {
+          width: 100%;
+        }
+      }
+
+      .menuIcon:nth-of-type(2) {
+        a {
+          width: 88%;
+          position: relative;
+          top: 2%;
+
+          span {
+            position: relative;
+            bottom: 3%;
+          }
+        }
+        div {
+          width: 100%;
+        }
+      }
+
+      .menuIcon:last-of-type {
+        a {
+          width: 83%;
+          position: relative;
+          gap: 8%;
+          top: 1.5%;
+        }
+        div {
+          position: relative;
+          // top: -3px;
+        }
       }
     }
 
-    .menuIcon:last-of-type {
-      div {
-        position: relative;
-        top: -3px;
-      }
-    }
-
-    h1 {
-      font-weight: 400;
+    .h1Start {
       top: 2%;
     }
 
+    h1 {
+      top: 2%;
+    }
     .subheaders {
       top: 0;
     }
