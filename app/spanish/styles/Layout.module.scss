@@ -1,0 +1,6 @@
+@use "../../styles/abstracts/mixins.scss";
+
+.layout {
+  @include mixins.flex(column, nowrap);
+  gap: 30px;
+}

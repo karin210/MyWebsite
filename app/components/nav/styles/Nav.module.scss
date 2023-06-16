@@ -1,0 +1,6 @@
+@use "../../../styles/abstracts/mixins.scss";
+
+.navBox {
+  @include mixins.flex(row, wrap);
+  justify-content: space-around;
+}

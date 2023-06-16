@@ -1,5 +1,5 @@
 // css
-import styles from "./styles/Portafolio.module.scss";
+import styles from "./styles/Portfolio.module.scss";
 // system components
 import React from "react";
 import Project from "@/app/components/portfolio/project";
@@ -24,9 +24,9 @@ export default function Portfolio() {
         title="nextEvents"
         siteLink="https://next-events-pi-sandy.vercel.app/"
         codeLink="https://github.com/karin210/nextEvents"
-        descriptionH="Descripción"
-        description="App de registro para eventos"
-        madeWith="Hecho con"
+        descriptionH="Description"
+        description="Event registration app"
+        madeWith="Made with"
       >
         <div className={styles.iconsBox}>
           <Image
@@ -91,9 +91,9 @@ export default function Portfolio() {
         title="calc_react"
         siteLink="https://karin210.github.io/calc_react/"
         codeLink="https://github.com/karin210/calc_react"
-        descriptionH="Descripción"
-        description="Calculadora"
-        madeWith="Hecho con"
+        descriptionH="Description"
+        description="Calculator"
+        madeWith="Made with"
       >
         <div className={styles.iconsBox}>
           <Image
@@ -130,9 +130,9 @@ export default function Portfolio() {
         title="avocado"
         siteLink="https://karin210.github.io/avocado/"
         codeLink="https://github.com/karin210/avocado"
-        descriptionH="Descripción"
-        description="Website de exportador de aguacate"
-        madeWith="Hecho con"
+        descriptionH="Description"
+        description="Avocado seller website"
+        madeWith="Made with"
       >
         <div className={styles.iconsBox}>
           <Image
@@ -169,9 +169,9 @@ export default function Portfolio() {
         title="PubliciCat"
         siteLink="https://karin210.github.io/PubliciCat/"
         codeLink="https://github.com/karin210/PubliciCat"
-        descriptionH="Descripción"
-        description="Website de empresa de marketing"
-        madeWith="Hecho con"
+        descriptionH="Description"
+        description="Marketing company website"
+        madeWith="Made with"
       >
         <div className={styles.iconsBox}>
           <Image

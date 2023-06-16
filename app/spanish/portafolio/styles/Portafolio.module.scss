@@ -1,0 +1,25 @@
+@use "../../../styles/abstracts/mixins.scss";
+@use "../../../styles/abstracts/variables.scss";
+
+.projectsBox {
+  padding: 3%;
+  @include mixins.flex(row, wrap);
+  justify-content: center;
+  align-content: center;
+  gap: 30px;
+
+  h2 {
+    font-size: clamp(1rem, 2vw, 1.8rem);
+  }
+
+  .iconsBox {
+    @include mixins.flex(row, wrap);
+    justify-content: space-around;
+    gap: 10px;
+
+    .icon {
+      width: 37px;
+      height: auto;
+    }
+  }
+}

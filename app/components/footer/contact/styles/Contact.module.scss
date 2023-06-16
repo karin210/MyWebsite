@@ -1,0 +1,19 @@
+@use "../../../../styles/abstracts/mixins.scss";
+@use "../../../../styles/abstracts/variables.scss";
+
+.iconsBox {
+  @include mixins.flex(row, wrap);
+  justify-content: space-around;
+  gap: 30px;
+}
+.noLinkIcons {
+  @include mixins.flex(row, wrap);
+  justify-content: center;
+  gap: 30px;
+
+  div {
+    @include mixins.flex(row, wrap);
+    align-items: center;
+    gap: 10px;
+  }
+}

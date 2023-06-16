@@ -1,0 +1,24 @@
+@use "../../../../styles/abstracts/mixins.scss";
+@use "../../../../styles/abstracts/variables.scss";
+
+.sectionBox {
+  width: 100%;
+  max-width: 500px;
+  padding: 3%;
+  @include mixins.flex(column, nowrap);
+  text-align: center;
+  gap: 15px;
+  background-color: variables.$surfaceColor;
+  border: 1px solid variables.$surfaceBorderColor;
+  border-radius: 8px;
+
+  h2 {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    line-height: 150%;
+  }
+}

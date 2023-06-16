@@ -7,7 +7,7 @@ export default function Page() {
       <div></div>
       <h1>Karin_Arroyo</h1>
       <div>
-        <h2>Desarrollador Frontend</h2>
+        <h2>Desarrollador XFrontend</h2>
         <h3>Website</h3>
       </div>
     </main>

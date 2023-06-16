@@ -1,0 +1,42 @@
+@use "../../../styles/abstracts/variables.scss";
+@use "../../../styles/abstracts/mixins.scss";
+
+.main {
+  @include mixins.flex(column, nowrap);
+  // padding: 1.5% 6.5%;
+  gap: 5px;
+
+  .articlesBox {
+    @include mixins.flex(row, wrap);
+    justify-content: space-between;
+    padding: 3%;
+  }
+
+  .techStackBox {
+    padding: 4%;
+    @include mixins.flex(column, nowrap);
+    gap: 20px;
+
+    background-color: variables.$surfaceColor;
+
+    h2 {
+      font-size: clamp(1.1rem, 2vw, 1.8rem);
+      text-align: center;
+    }
+  }
+
+  .iconsBox {
+    @include mixins.flex(row, wrap);
+    gap: 25px;
+  }
+}
+
+@media (min-width: 714px) {
+  .main {
+    gap: 55px;
+
+    .techStackBox {
+      gap: 40px;
+    }
+  }
+}

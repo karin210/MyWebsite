@@ -1,0 +1,24 @@
+@use "../../../../styles/abstracts/variables.scss";
+@use "../../../../styles/abstracts/mixins.scss";
+
+.iconBox {
+  width: min-content;
+  @include mixins.flex(column, nowrap);
+  align-items: center;
+  margin: 0 auto;
+
+  span {
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    margin: 0 auto;
+  }
+}
+.img {
+  width: 50px;
+  height: auto;
+}
+
+@media (min-width: 714px) {
+  .img {
+    width: 100px;
+  }
+}

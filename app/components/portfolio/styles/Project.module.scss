@@ -1,0 +1,28 @@
+@use "../../../styles/abstracts/mixins.scss";
+@use "../../../styles/abstracts/variables.scss";
+
+.projectBox {
+  width: 90%;
+  height: auto;
+  padding: 4%;
+  @include mixins.flex(column, nowrap);
+  gap: 20px;
+  text-align: center;
+  background-color: variables.$surfaceColor;
+  border: 1px solid variables.$surfaceBorderColor;
+  border-radius: 7px;
+
+  section {
+    @include mixins.flex(column, nowrap);
+    gap: 10px;
+  }
+
+  h2 {
+    font-size: clamp(1.15rem, 2vw, 1.8rem);
+  }
+
+  .links {
+    @include mixins.flex(row, wrap);
+    justify-content: space-around;
+  }
+}
