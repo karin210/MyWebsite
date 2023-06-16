@@ -3,6 +3,7 @@
 
 .projectBox {
   width: 90%;
+  max-width: 400px;
   height: auto;
   padding: 4%;
   @include mixins.flex(column, nowrap);
@@ -12,8 +13,20 @@
   border: 1px solid variables.$surfaceBorderColor;
   border-radius: 7px;
 
+  .details {
+    padding: 4% 0;
+    @include mixins.flex(column, nowrap);
+    gap: 20px;
+    border-radius: 10px;
+    background-color: rgb(246, 246, 246);
+    border: 1px solid rgb(240, 240, 240);
+  }
+
   section {
     @include mixins.flex(column, nowrap);
+  }
+
+  .section {
     gap: 10px;
   }
 
@@ -21,8 +34,16 @@
     font-size: clamp(1.15rem, 2vw, 1.8rem);
   }
 
+  .title {
+    color: variables.$primaryColor;
+  }
+
   .links {
     @include mixins.flex(row, wrap);
     justify-content: space-around;
+
+    a {
+      color: rgb(59, 59, 255);
+    }
   }
 }

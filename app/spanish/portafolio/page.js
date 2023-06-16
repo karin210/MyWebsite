@@ -26,7 +26,7 @@ export default function Portfolio() {
         codeLink="https://github.com/karin210/nextEvents"
         descriptionH="Descripción"
         description="App de registro para eventos"
-        madeWith="Hecho con"
+        madeWith="Hecho con:"
       >
         <div className={styles.iconsBox}>
           <Image
@@ -93,7 +93,7 @@ export default function Portfolio() {
         codeLink="https://github.com/karin210/calc_react"
         descriptionH="Descripción"
         description="Calculadora"
-        madeWith="Hecho con"
+        madeWith="Hecho con:"
       >
         <div className={styles.iconsBox}>
           <Image
@@ -132,7 +132,7 @@ export default function Portfolio() {
         codeLink="https://github.com/karin210/avocado"
         descriptionH="Descripción"
         description="Website de exportador de aguacate"
-        madeWith="Hecho con"
+        madeWith="Hecho con:"
       >
         <div className={styles.iconsBox}>
           <Image
@@ -171,7 +171,7 @@ export default function Portfolio() {
         codeLink="https://github.com/karin210/PubliciCat"
         descriptionH="Descripción"
         description="Website de empresa de marketing"
-        madeWith="Hecho con"
+        madeWith="Hecho con:"
       >
         <div className={styles.iconsBox}>
           <Image

@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import LangControls from "./components/homePage/LangControls";
 import Footer from "./components/footer/Footer";
 // statics
-import cv from "../public/resume-svgrepo-com.svg";
+// import cv from "../public/resume-svgrepo-com.svg";
 import portfolioIcon from "../public/briefcase-portfolio-svgrepo-com.svg";
 // dependencies
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
@@ -123,7 +123,7 @@ export default function Home() {
           </div>
         )}
       </main>
-      <Footer />
+      <Footer style={styles.footerHome} />
     </>
   );
 }

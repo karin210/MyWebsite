@@ -1,6 +1,10 @@
 @use "./abstracts/mixins.scss";
 @use "./abstracts/variables.scss";
 
+.footerHome {
+  margin-bottom: 0;
+  background-color: variables.$primaryColor;
+}
 .mainStart {
   height: 100dvh;
   animation-name: homeStart;
@@ -9,7 +13,7 @@
 }
 
 .main {
-  height: 100dvh;
+  height: 99.5dvh;
   @include mixins.flex(column, nowrap);
   justify-content: space-between;
   align-items: center;
@@ -60,6 +64,19 @@
     }
 
     // In mobile the first menu option must be bigger
+    @media (max-width: 714px) {
+      .menuIcon:first-of-type a:active {
+        width: 50%;
+        transition: 0.3s;
+      }
+
+      .menuIcon:nth-of-type(2) a:active,
+      .menuIcon:last-of-type a:active {
+        width: 67%;
+        transition: 0.3s;
+      }
+    }
+
     .menuIcon:first-of-type {
       width: 100%;
 
@@ -86,10 +103,6 @@
         gap: 12px;
       }
     }
-
-    // li:active {
-    //   width: 80%;
-    // }
   }
 
   .h1Start {
@@ -203,6 +216,13 @@
           padding: 0;
           margin: 0 auto;
         }
+      }
+
+      .menuIcon:first-of-type:hover,
+      .menuIcon:nth-of-type(2):hover,
+      .menuIcon:last-of-type:hover {
+        padding: 5%;
+        transition: 0.3s;
       }
 
       .menuIcon:first-of-type {

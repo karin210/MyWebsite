@@ -1,6 +1,15 @@
 @use "../../../styles/abstracts/mixins.scss";
+@use "../../../styles/abstracts/variables.scss";
 
 .navBox {
+  width: 100%;
+  padding: clamp(10px, 3%, 20px) 0;
   @include mixins.flex(row, wrap);
   justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  background-color: variables.$surfaceColor;
+}
+
+@media (min-width: 714px) {
 }

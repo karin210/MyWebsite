@@ -2,18 +2,46 @@
 @use "../../../../styles/abstracts/variables.scss";
 
 .iconsBox {
+  width: 100%;
+  height: auto;
+  padding: 0 6%;
+  border-radius: 8px;
   @include mixins.flex(row, wrap);
   justify-content: space-around;
   gap: 30px;
+  margin: 0 auto;
+
+  // background-color: rgb(241, 238, 238);
 }
 .noLinkIcons {
+  font-size: clamp(0.7rem, 2vw, 1.2rem);
   @include mixins.flex(row, wrap);
   justify-content: center;
-  gap: 30px;
+  gap: 15px;
+  color: white;
+  cursor: inherit;
+
+  .img {
+    width: 35px;
+    height: auto;
+    padding: 3%;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: white;
+  }
 
   div {
     @include mixins.flex(row, wrap);
     align-items: center;
     gap: 10px;
+  }
+}
+
+@media (min-width: 714px) {
+  .noLinkIcons {
+    .img {
+      width: 53px;
+      // padding: 1%;
+    }
   }
 }

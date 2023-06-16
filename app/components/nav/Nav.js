@@ -10,7 +10,7 @@ import NavItem from "./components/NavItem";
 import homeIcon from "../../../public/home-svgrepo-com.svg";
 import folderIcon from "../../../public/folder-svgrepo-com.svg";
 import profileIcon from "../../../public/profile-round-1342-svgrepo-com.svg";
-import resumeIcon from "../../../public/curriculum-portfolio-svgrepo-com.svg";
+import resumeIcon from "../../../public/resume-4-svgrepo-com.svg";
 
 export default function Nav() {
   const url = usePathname();

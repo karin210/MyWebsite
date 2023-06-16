@@ -16,25 +16,27 @@ export default function Project({
 }) {
   return (
     <article className={styles.projectBox}>
-      <section>
-        <h2>{title}</h2>
-        <div className={styles.links}>
-          <Link href={siteLink}>
-            <span>Website</span>
-          </Link>
-          <Link href={codeLink}>
-            <span>Repo</span>
-          </Link>
-        </div>
-      </section>
-      <section>
-        <h3 className={styles.descriptionH}>{descriptionH}</h3>
-        <p>{description}</p>
-      </section>
-      <section>
-        <h2>{madeWith}</h2>
-        {children}
-      </section>
+      <h2 className={styles.title}>{title}</h2>
+      <div className={styles.details}>
+        <section className={styles.section}>
+          <div className={styles.links}>
+            <Link href={siteLink}>
+              <span>Website</span>
+            </Link>
+            <Link href={codeLink}>
+              <span>Repo</span>
+            </Link>
+          </div>
+        </section>
+        <section className={styles.section}>
+          <h3 className={styles.descriptionH}>{descriptionH}</h3>
+          <p>{description}</p>
+        </section>
+        <section className={styles.section}>
+          <h3>{madeWith}</h3>
+          {children}
+        </section>
+      </div>
     </article>
   );
 }

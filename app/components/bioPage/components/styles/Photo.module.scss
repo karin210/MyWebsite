@@ -1,18 +1,33 @@
 @use "../../../../styles/abstracts/variables.scss";
 
-.photo {
+.fig {
   width: 30%;
-  max-width: 155px;
+  max-width: 147px;
   height: 100px;
   border-radius: 50%;
   background-color: gray;
   border: 2px solid variables.$primaryColor;
   color: red;
   margin: 0 auto;
+  overflow: hidden;
+
+  .img {
+    width: 110%;
+    height: auto;
+    position: relative;
+    left: -6px;
+    top: -10px;
+  }
 }
 
 @media (min-width: 714px) {
-  .photo {
+  .fig {
     height: 150px;
+
+    .img {
+      width: 114%;
+      left: -10px;
+      top: -17px;
+    }
   }
 }
