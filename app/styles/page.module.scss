@@ -7,14 +7,14 @@
   background-color: variables.$primaryColor;
 }
 .mainStart {
-  height: 100dvh;
+  height: 100vh;
   animation-name: homeStart;
   animation-duration: 5s;
   animation-fill-mode: forwards;
 }
 
 .main {
-  height: 99.5vh;
+  height: 92vh;
   @include mixins.flex(column, nowrap);
   justify-content: space-between;
   align-items: center;
