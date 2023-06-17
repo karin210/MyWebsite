@@ -1,8 +1,7 @@
 @use "../../../../styles/abstracts/variables.scss";
 
 .fig {
-  width: 30%;
-  max-width: 147px;
+  width: 100px;
   height: 100px;
   border-radius: 50%;
   background-color: gray;
@@ -22,10 +21,10 @@
 
 @media (min-width: 714px) {
   .fig {
-    height: 150px;
+    width: 147px;
+    height: 147px;
 
     .img {
-      width: 114%;
       left: -10px;
       top: -17px;
     }
