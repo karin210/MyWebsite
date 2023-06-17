@@ -9,6 +9,7 @@
     @include mixins.flex(row, wrap);
     justify-content: space-between;
     padding: 3%;
+    gap: 10px;
   }
 
   .techStackBox {
@@ -36,6 +37,10 @@
 
     .techStackBox {
       gap: 40px;
+    }
+
+    .articlesBox {
+      gap: 0;
     }
   }
 }
