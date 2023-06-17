@@ -14,7 +14,7 @@
 }
 
 .main {
-  height: 99.5dvh;
+  height: 99.5vh;
   @include mixins.flex(column, nowrap);
   justify-content: space-between;
   align-items: center;
