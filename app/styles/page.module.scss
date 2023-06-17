@@ -2,7 +2,7 @@
 @use "./abstracts/variables.scss";
 
 .footerHome {
-  padding: 0.5% 0;
+  padding: 2% 0;
   margin-bottom: 0;
   background-color: variables.$primaryColor;
 }
@@ -14,7 +14,7 @@
 }
 
 .main {
-  height: 92vh;
+  height: 99.5vh;
   @include mixins.flex(column, nowrap);
   justify-content: space-between;
   align-items: center;
@@ -273,5 +273,9 @@
     .subheaders {
       top: 0;
     }
+  }
+
+  .footerHome {
+    padding: 0.5% 0;
   }
 }
