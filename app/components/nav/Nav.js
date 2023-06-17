@@ -29,7 +29,11 @@ export default function Nav() {
         src={folderIcon}
         alt="Portfolio Icon"
       />
-      <NavItem link="_blank" src={resumeIcon} alt="Resume Icon" />
+      <NavItem
+        link="https://drive.google.com/file/d/1Du8zEzC_UOjHdaaK-duZF1XeIgUli8a6/view?usp=sharing"
+        src={resumeIcon}
+        alt="Resume Icon"
+      />
     </nav>
   );
 }

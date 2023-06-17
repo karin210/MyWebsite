@@ -62,8 +62,8 @@ export default function Home() {
             <Link
               href={
                 lang === "En"
-                  ? "https://onedrive.live.com/edit.aspx?resid=3E2A2F75C7CB7EC!212&ithint=file%2cdocx&ct=1686090670617&wdOrigin=OFFICECOM-WEB.MAIN.MRU"
-                  : "https://onedrive.live.com/edit.aspx?resid=3E2A2F75C7CB7EC!212&ithint=file%2cdocx&ct=1686090670617&wdOrigin=OFFICECOM-WEB.MAIN.MRU"
+                  ? "https://drive.google.com/file/d/1Du8zEzC_UOjHdaaK-duZF1XeIgUli8a6/view?usp=sharing"
+                  : "https://drive.google.com/file/d/1Du8zEzC_UOjHdaaK-duZF1XeIgUli8a6/view?usp=sharing"
               }
             >
               <Player
