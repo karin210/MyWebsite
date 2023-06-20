@@ -15,6 +15,7 @@
   // background-color: rgb(241, 238, 238);
 }
 .noLinkIcons {
+  width: 100%;
   font-size: clamp(0.7rem, 2vw, 1rem);
   @include mixins.flex(row, wrap);
   justify-content: center;
@@ -40,6 +41,7 @@
 
 @media (min-width: 714px) {
   .noLinkIcons {
+    width: auto;
     .img {
       width: 43px;
       // padding: 1%;

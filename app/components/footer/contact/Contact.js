@@ -17,14 +17,14 @@ export default function Contact() {
   return (
     <section className={styles.iconsBox}>
       <div className={styles.noLinkIcons}>
-        <div>
+        {/* <div>
           <Image
             className={styles.img}
             src={WhatsAppIcon}
             alt="WhatsApp icon"
           />
           <span>332-252-9630</span>
-        </div>
+        </div> */}
         <div>
           <Image className={styles.img} src={EmailIcon} alt="Email icon" />
           <span>karin_ar72@hotmail.com</span>
@@ -35,7 +35,7 @@ export default function Contact() {
         src={LinkedInIcon}
         alt="LinkedIn icon"
       />
-      <Icon
+      {/* <Icon
         link="https://www.facebook.com/profile.php?id=100009669095788"
         src={FacebookIcon}
         alt="Facebook icon"
@@ -44,7 +44,7 @@ export default function Contact() {
         link="https://www.instagram.com/karin_arroyo10/"
         src={InstagramIcon}
         alt="Instagram icon"
-      />
+      /> */}
       <Icon
         link="https://github.com/karin210"
         src={GitHubIcon}
