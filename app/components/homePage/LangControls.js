@@ -5,13 +5,6 @@ import styles from "./styles/LangControls.module.scss";
 export default function LangControls({ handleLang }) {
   const [lang, setLang] = useState("En");
   const [showLanguages, setShowLanguages] = useState(true);
-  const [homeStart, setHomeStart] = useState(true);
-
-  function deleteStartAnimation() {
-    setHomeStart(false);
-  }
-
-  setTimeout(deleteStartAnimation, 4400);
 
   function changeLang(e) {
     if (e.target.value === "Es") {
@@ -32,7 +25,7 @@ export default function LangControls({ handleLang }) {
   }
 
   return (
-    <div className={homeStart ? styles.controlsStart : styles.controlsBox}>
+    <div className={styles.controlsBox}>
       <form className={showLanguages ? styles.form : styles.closeForm}>
         {lang === "En" ? (
           <>

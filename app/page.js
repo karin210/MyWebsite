@@ -17,13 +17,9 @@ import { Player, Controls } from "@lottiefiles/react-lottie-player";
 export default function Home() {
   const [lang, setLang] = useState("En");
   const [hideMenu, setHideMenu] = useState(true);
-  const [homeStart, setHomeStart] = useState(true);
+  // const [homeStart, setHomeStart] = useState(true);
 
-  function deleteStartAnimation() {
-    setHomeStart(false);
-  }
-
-  setTimeout(deleteStartAnimation, 5000);
+  // setTimeout(deleteStartAnimation, 5000);
 
   function handleLang(language, toggleh1) {
     if (language === "Es") {
@@ -37,11 +33,11 @@ export default function Home() {
 
   return (
     <>
-      <main className={`${styles.main} ${homeStart && styles.mainStart}`}>
+      <main className={styles.main}>
         <LangControls handleLang={handleLang} />
 
         {/* Menu Links */}
-        <ul className={homeStart ? styles.menuStart : styles.menuBox}>
+        <ul className={styles.menuBox}>
           <li className={styles.menuIcon}>
             <Link href={lang === "En" ? "/bio" : "/spanish/bio"}>
               <Player
@@ -102,22 +98,14 @@ export default function Home() {
           </li>
         </ul>
 
-        <h1 className={homeStart ? styles.h1Start : styles.h1}>Karin Arroyo</h1>
+        <h1 className={styles.h1}>Karin Arroyo</h1>
         {lang === "En" ? (
-          <div
-            className={`${styles.subheaders} ${
-              homeStart ? styles.subheadersStart : ""
-            }`}
-          >
+          <div className={styles.subheaders}>
             <h2>Frontend Developer</h2>
             <h3>Website</h3>
           </div>
         ) : (
-          <div
-            className={`${styles.subheaders} ${
-              homeStart ? styles.subheadersStart : ""
-            }`}
-          >
+          <div className={styles.subheaders}>
             <h2>Desarrollador Frontend</h2>
             <h3>Website</h3>
           </div>

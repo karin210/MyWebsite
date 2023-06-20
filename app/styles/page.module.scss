@@ -6,23 +6,12 @@
   margin-bottom: 0;
   background-color: variables.$primaryColor;
 }
-.mainStart {
-  height: 100dvh;
-  animation-name: homeStart;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-}
-
 .main {
   height: 99.5dvh;
   @include mixins.flex(column, nowrap);
   justify-content: space-between;
   align-items: center;
   padding: variables.$homePagePadding;
-
-  .menuStart {
-    filter: opacity(0);
-  }
 
   .menuBox {
     animation-name: menuAppear;
@@ -64,20 +53,6 @@
       }
     }
 
-    // In mobile the first menu option must be bigger
-    @media (max-width: 714px) {
-      .menuIcon:first-of-type a:active {
-        width: 50%;
-        transition: 0.3s;
-      }
-
-      .menuIcon:nth-of-type(2) a:active,
-      .menuIcon:last-of-type a:active {
-        width: 67%;
-        transition: 0.3s;
-      }
-    }
-
     .menuIcon:first-of-type {
       width: 100%;
 
@@ -106,14 +81,14 @@
     }
   }
 
-  .h1Start {
-    color: transparent;
-    animation-name: h1Start;
-    animation-duration: 2.4s;
-    animation-delay: 1.7s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-  }
+  // .h1Start {
+  //   color: transparent;
+  //   animation-name: h1Start;
+  //   animation-duration: 2.4s;
+  //   // animation-delay: 1.7s;
+  //   animation-fill-mode: forwards;
+  //   animation-timing-function: ease;
+  // }
 
   h1 {
     font-size: clamp(1.15rem, 2vw, 1.9rem);
@@ -127,7 +102,7 @@
     color: transparent;
     animation-name: subheaders;
     animation-duration: 1s;
-    animation-delay: 3.3s;
+    // animation-delay: 3.3s;
     animation-fill-mode: forwards;
   }
 
@@ -148,18 +123,6 @@
       font-size: clamp(0.9rem, 2vw, 1.4rem);
       font-weight: 300;
     }
-  }
-}
-
-@keyframes homeStart {
-  0% {
-    background-color: rgba(0, 0, 0, 0.87);
-  }
-  70% {
-    background-color: rgba(0, 0, 0, 0.87);
-  }
-  100% {
-    background-color: variables.$backgroundColor;
   }
 }
 
@@ -197,11 +160,22 @@
   }
 }
 
+// In mobile the first menu option must be bigger
+@media (max-width: 714px) {
+  .menuIcon:first-of-type a:active {
+    width: 50%;
+    transition: 0.3s;
+  }
+
+  .menuIcon:nth-of-type(2) a:active,
+  .menuIcon:last-of-type a:active {
+    width: 67%;
+    transition: 0.3s;
+  }
+}
+
 @media (min-width: 714px) {
   .main {
-    .menuStart {
-      height: 62%;
-    }
     // In laptop screen the menu is not centered with justify-content: center
     .menuBox {
       width: auto;
@@ -258,13 +232,8 @@
         }
         div {
           position: relative;
-          // top: -3px;
         }
       }
-    }
-
-    .h1Start {
-      top: 2%;
     }
 
     h1 {

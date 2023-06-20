@@ -1,10 +1,5 @@
 @use "../../../styles/abstracts/mixins.scss";
 
-.controlsStart {
-  filter: opacity(0);
-  width: 100%;
-}
-
 .controlsBox {
   width: 100%;
   animation-name: controlsAppear;

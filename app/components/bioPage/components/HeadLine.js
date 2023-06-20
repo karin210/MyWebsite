@@ -3,8 +3,9 @@
 import styles from "./styles/HeadLine.module.scss";
 // system tools
 import React from "react";
-import Photo from "./photo";
 import { usePathname } from "next/navigation";
+// UI compnents
+import Photo from "./photo";
 
 export default function HeadLine() {
   const url = usePathname();
