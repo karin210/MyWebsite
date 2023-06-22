@@ -1,4 +1,5 @@
 @use "../../../styles/abstracts/mixins.scss";
+@use "../../../styles/abstracts/variables.scss";
 
 .controlsBox {
   width: 100%;
@@ -47,11 +48,11 @@
     }
 
     input:hover {
-      color: rgb(69, 128, 238);
+      color: variables.$controlsColor;
     }
 
     input:active {
-      color: rgb(69, 128, 238);
+      color: variables.$controlsColor;
     }
 
     .enBtn::after {
@@ -93,18 +94,26 @@
 
   .enBtn:checked::after {
     content: "En";
+    padding: clamp(5px, 30%, 10px);
     font-size: clamp(1.1rem, 1.8vw, 1.7rem);
+    border-radius: 8px;
+    color: variables.$controlsColor;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid lightgray;
     position: relative;
     z-index: -1;
-    // left: 40px;
   }
 
   .esBtn:checked::after {
     content: "Es";
+    padding: 5px;
     font-size: clamp(1.1rem, 1.8vw, 1.7rem);
+    border-radius: 8px;
+    color: variables.$controlsColor;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid lightgray;
     position: relative;
     z-index: -1;
-    // left: 40%;
   }
 }
 
