@@ -38,23 +38,25 @@ export default function Home() {
 
         {/* Menu Links */}
         <ul className={styles.menuBox}>
-          <li className={styles.menuIcon}>
+          <li>
             <Link href={lang === "En" ? "/bio" : "/spanish/bio"}>
-              <Player
-                autoplay
-                loop
-                src="https://assets2.lottiefiles.com/packages/lf20_8pL7DHZXvo.json"
-                speed={1}
-              >
-                <Controls
-                  visible={false}
-                  buttons={["play", "repeat", "frame", "debug"]}
-                />
-              </Player>
-              {lang === "En" ? <span>About Me</span> : <span>Sobre Mí</span>}
+              <article className={styles.menuItem}>
+                <Player
+                  autoplay
+                  loop
+                  src="https://assets2.lottiefiles.com/packages/lf20_8pL7DHZXvo.json"
+                  speed={1}
+                >
+                  <Controls
+                    visible={false}
+                    buttons={["play", "repeat", "frame", "debug"]}
+                  />
+                </Player>
+                {lang === "En" ? <span>About Me</span> : <span>Sobre Mí</span>}
+              </article>
             </Link>
           </li>
-          <li className={styles.menuIcon}>
+          <li className={styles.menuItemBox}>
             <Link
               href={
                 lang === "En"
@@ -62,38 +64,46 @@ export default function Home() {
                   : "https://drive.google.com/file/d/1Du8zEzC_UOjHdaaK-duZF1XeIgUli8a6/view?usp=sharing"
               }
             >
-              <Player
-                autoplay
-                loop
-                src="https://assets3.lottiefiles.com/packages/lf20_4DLPlW.json"
-                speed={1}
-              >
-                <Controls
-                  visible={false}
-                  buttons={["play", "repeat", "frame", "debug"]}
-                />
-              </Player>
-              {lang === "En" ? (
-                <span className={styles.resumeTxt}>Resume</span>
-              ) : (
-                <span className={styles.resumeTxt}>Currículum</span>
-              )}
+              <article className={styles.menuItem}>
+                <Player
+                  autoplay
+                  loop
+                  src="https://assets3.lottiefiles.com/packages/lf20_4DLPlW.json"
+                  speed={1}
+                >
+                  <Controls
+                    visible={false}
+                    buttons={["play", "repeat", "frame", "debug"]}
+                  />
+                </Player>
+                {lang === "En" ? (
+                  <span className={styles.resumeTxt}>Resume</span>
+                ) : (
+                  <span className={styles.resumeTxt}>Currículum</span>
+                )}
+              </article>
             </Link>
           </li>
-          <li className={styles.menuIcon}>
+          <li className={styles.menuItemBox}>
             <Link href={lang === "En" ? "/portfolio" : "/spanish/portafolio"}>
-              <Player
-                autoplay
-                loop
-                src="https://assets8.lottiefiles.com/private_files/lf30_6npzscwg.json"
-                speed={1}
-              >
-                <Controls
-                  visible={false}
-                  buttons={["play", "repeat", "frame", "debug"]}
-                />
-              </Player>
-              {lang === "En" ? <span>Portfolio</span> : <span>Portafolio</span>}
+              <article className={styles.menuItem}>
+                <Player
+                  autoplay
+                  loop
+                  src="https://assets8.lottiefiles.com/private_files/lf30_6npzscwg.json"
+                  speed={1}
+                >
+                  <Controls
+                    visible={false}
+                    buttons={["play", "repeat", "frame", "debug"]}
+                  />
+                </Player>
+                {lang === "En" ? (
+                  <span>Portfolio</span>
+                ) : (
+                  <span>Portafolio</span>
+                )}
+              </article>
             </Link>
           </li>
         </ul>

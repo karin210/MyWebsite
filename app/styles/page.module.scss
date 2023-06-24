@@ -32,10 +32,12 @@
     li {
       width: 49.5%;
       height: 180px;
+      box-sizing: border-box;
       background-color: variables.$surfaceColor;
       border: 1px solid variables.$surfaceBorderColor;
-      a {
-        width: 80%;
+
+      .menuItem {
+        width: 65%;
         height: 100%;
         @include mixins.flex(column, nowrap);
         align-items: center;
@@ -44,7 +46,7 @@
 
         span {
           font-weight: 500;
-          font-size: clamp(1rem, 2vw, 1.8rem);
+          font-size: clamp(1rem, 2vw, 1.6rem);
         }
 
         .resumeTxt {
@@ -53,31 +55,16 @@
       }
     }
 
-    .menuIcon:first-of-type {
+    li:first-of-type {
       width: 100%;
 
-      a {
-        width: 60%;
-        margin: 0 auto;
-      }
-
-      a span {
-        font-size: clamp(1.15rem, 2vw, 1.8rem);
+      span {
+        font-size: clamp(1.15rem, 2vw, 1.6rem);
       }
     }
 
-    .menuIcon:nth-of-type(2) {
-      div {
-        position: relative;
-        top: 4px;
-      }
-    }
-
-    .menuIcon:last-of-type {
-      a {
-        margin-top: 3%;
-        gap: 12px;
-      }
+    li:last-of-type a .menuItem {
+      gap: 9%;
     }
   }
 
@@ -153,15 +140,12 @@
 
 // In mobile the first menu option must be bigger
 @media (max-width: 714px) {
-  .menuIcon:first-of-type a:active {
-    width: 50%;
-    transition: 0.3s;
-  }
-
-  .menuIcon:nth-of-type(2) a:active,
-  .menuIcon:last-of-type a:active {
-    width: 67%;
-    transition: 0.3s;
+  .menuBox {
+    li:active {
+      background-color: rgb(255, 255, 255);
+      // width: 50%;
+      transition: 0.3s;
+    }
   }
 }
 
@@ -177,65 +161,70 @@
         height: 100%;
         margin: 0;
         padding: 0;
-        a {
-          width: 100%;
-          padding: 0;
-          margin: 0 auto;
-        }
+        transition: 0.2s;
       }
 
-      .menuIcon:first-of-type:hover,
-      .menuIcon:nth-of-type(2):hover,
-      .menuIcon:last-of-type:hover {
-        padding: 5%;
-        transition: 0.3s;
-      }
+      li:first-of-type {
+        width: 28.7%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
 
-      .menuIcon:first-of-type {
-        width: 32%;
-        a {
-          width: 100%;
-        }
-      }
+        .menuItem {
+          margin-top: 5px;
+          // position: relative;
+          // bottom: 25px;
+          // top: 21px;
+          // gap: 20px;
 
-      .menuIcon:nth-of-type(2) {
-        a {
-          width: 88%;
-          position: relative;
-          top: 2%;
+          div {
+            width: 125%;
+            position: relative;
+            bottom: 9px;
+            display: flex;
+            justify-content: center;
+          }
 
           span {
-            position: relative;
-            bottom: 3%;
+            // margin: 0 auto;
           }
         }
-        div {
-          width: 100%;
+      }
+
+      li:nth-of-type(2) .menuItem span {
+        position: relative;
+        top: 2px;
+      }
+
+      li:last-of-type .menuItem {
+        width: 62%;
+        position: relative;
+        top: 2px;
+
+        span {
+          position: relative;
+          top: 6px;
         }
       }
 
-      .menuIcon:last-of-type {
-        a {
-          width: 83%;
-          position: relative;
-          gap: 8%;
-          top: 1.5%;
-        }
-        div {
-          position: relative;
-        }
+      li:hover {
+        background-color: rgb(255, 255, 255);
+        // border-top: 2px solid rgb(200, 200, 200);
+        // border-left: 2px solid rgb(200, 200, 200);
+        // border-right: 2px solid rgb(0, 0, 0);
+        // border-bottom: 2px solid rgb(0, 0, 0);
+      }
+
+      h1 {
+        top: 2%;
+      }
+      .subheaders {
+        top: 0;
       }
     }
 
-    h1 {
-      top: 2%;
+    .footerHome {
+      padding: 0.5% 0;
     }
-    .subheaders {
-      top: 0;
-    }
-  }
-
-  .footerHome {
-    padding: 0.5% 0;
   }
 }
