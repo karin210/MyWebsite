@@ -14,17 +14,19 @@ export default function HeadLine() {
     <section className={styles.headlineBox}>
       <Photo />
       <div className={styles.textBox}>
-        <h1>Carlos Karin Arroyo Chagoya</h1>
+        <h1>Carlos_Karin_Arroyo_Chagoya</h1>
         {isSpanish ? (
           <p>
-            Trabajo para construir aplicaciones grandiosas y convertirme en
+            Soy un desarrollador front-end autodidácta con un enorme interés por
+            el desarrollo web y la tecnología. Mi próxima meta es convertirme en
             desarrollador Full-Stack. Estoy en busca de un equipo con quienes
             crecer juntos.
           </p>
         ) : (
           <p>
-            Aiming to build great web apps and become a Full-Stack developer. I
-            want to find a great team with whom grow along.
+            I&apos;m a self-though front-end developer with a long interest on
+            web development and Tech aiming to become in a Full-Stack developer.
+            I want to find a great team with whom grow along.
           </p>
         )}
       </div>

@@ -10,9 +10,9 @@ import TextBlock from "@/app/components/bioPage/components/textBlock";
 export default function BioPage() {
   return (
     <>
-      <Bio stackH2="Tech Stack">
+      <Bio stackH2="Tech_Stack">
         <TextBlock
-          h="How did I learn code?"
+          h="How_did_I_learn_code?"
           body="I was introduced into the web development by a developer friend in
         Guadalajara who teach me some basis of frontend development. I learn my
         main skills by reading documentation in sites like w3schools.com,
@@ -21,7 +21,7 @@ export default function BioPage() {
         courses in the platform of freecodecamp.org too."
         />
         <TextBlock
-          h="Why web development?"
+          h="Why_web_development?"
           body="I had no knowledge about the programming fields, I just wanted enter
           into the Tech industry. Before I'ad started reading about the
           largest and most innovative companies in the world like Google,
@@ -37,7 +37,7 @@ export default function BioPage() {
           Ubuntu in my laptop and helped me to start in web development"
         />
         <TextBlock
-          h="Why React?"
+          h="Why_React?"
           body="I realized it's not possible to write complex and easy to mantain
           web apps just with Vanilla JavaScript. My friend considered that a
           good beginner tool to build larger projects was React, then I

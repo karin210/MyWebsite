@@ -48,11 +48,11 @@
     }
 
     input:hover {
-      color: variables.$controlsColor;
+      color: variables.$actionsColor;
     }
 
     input:active {
-      color: variables.$controlsColor;
+      color: variables.$actionsColor;
     }
 
     .enBtn::after {
@@ -83,8 +83,7 @@
   border: 1px solid transparent;
 
   label {
-    font-size: clamp(1.3rem, 2vw, 1.9rem);
-    color: transparent;
+    display: none;
   }
 
   input {
@@ -97,7 +96,7 @@
     padding: clamp(5px, 30%, 10px);
     font-size: clamp(1.1rem, 1.8vw, 1.7rem);
     border-radius: 8px;
-    color: variables.$controlsColor;
+    color: variables.$actionsColor;
     background-color: rgb(250, 250, 250);
     border: 1px solid lightgray;
     position: relative;
@@ -109,7 +108,7 @@
     padding: 5px;
     font-size: clamp(1.1rem, 1.8vw, 1.7rem);
     border-radius: 8px;
-    color: variables.$controlsColor;
+    color: variables.$actionsColor;
     background-color: rgb(250, 250, 250);
     border: 1px solid lightgray;
     position: relative;

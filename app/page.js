@@ -137,19 +137,20 @@ export default function Home() {
             </Link>
           </li>
         </ul>
-
-        <h1 className={styles.h1}>Karin Arroyo</h1>
-        {lang === "En" ? (
-          <div className={styles.subheaders}>
-            <h2>Frontend Developer</h2>
-            <h3>Website</h3>
-          </div>
-        ) : (
-          <div className={styles.subheaders}>
-            <h2>Desarrollador Frontend</h2>
-            <h3>Website</h3>
-          </div>
-        )}
+        <section className={styles.authorInfo}>
+          <h1 className={styles.h1}>Karin_Arroyo</h1>
+          {lang === "En" ? (
+            <div className={styles.subheaders}>
+              <h2>Frontend_Developer</h2>
+              <h3>Website</h3>
+            </div>
+          ) : (
+            <div className={styles.subheaders}>
+              <h2>Desarrollador_Frontend</h2>
+              <h3>Website</h3>
+            </div>
+          )}
+        </section>
       </main>
       <Footer style={styles.footerHome} />
     </>

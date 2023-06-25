@@ -26,7 +26,7 @@ export default function Portfolio() {
         codeLink="https://github.com/karin210/nextEvents"
         descriptionH="Description"
         description="Event registration app"
-        madeWith="Made with:"
+        madeWith="Made_with:"
       >
         <div className={styles.iconsBox}>
           <Image
@@ -93,7 +93,7 @@ export default function Portfolio() {
         codeLink="https://github.com/karin210/calc_react"
         descriptionH="Description"
         description="Calculator"
-        madeWith="Made with:"
+        madeWith="Made_with:"
       >
         <div className={styles.iconsBox}>
           <Image
@@ -132,7 +132,7 @@ export default function Portfolio() {
         codeLink="https://github.com/karin210/avocado"
         descriptionH="Description"
         description="Avocado seller website"
-        madeWith="Made with:"
+        madeWith="Made_with:"
       >
         <div className={styles.iconsBox}>
           <Image
@@ -171,7 +171,7 @@ export default function Portfolio() {
         codeLink="https://github.com/karin210/PubliciCat"
         descriptionH="Description"
         description="Marketing company website"
-        madeWith="Made with:"
+        madeWith="Made_with:"
       >
         <div className={styles.iconsBox}>
           <Image
@@ -199,6 +199,59 @@ export default function Portfolio() {
             className={styles.icon}
             src={reactIcon}
             alt="React icon"
+            width={500}
+            height={500}
+          />
+        </div>
+      </Project>
+      <Project
+        title="MyWebsite"
+        siteLink="https://my-website-karin210.vercel.app"
+        codeLink="https://github.com/karin210/MyWebsite"
+        descriptionH="Description"
+        description="Personal website"
+        madeWith="Made_with:"
+      >
+        <div className={styles.iconsBox}>
+          <Image
+            className={styles.icon}
+            src={htmlIcon}
+            alt="HTML icon"
+            width={500}
+            height={500}
+          />
+          <Image
+            className={styles.icon}
+            src={cssIcon}
+            alt="CSS icon"
+            width={500}
+            height={500}
+          />
+          <Image
+            className={styles.icon}
+            src={jsIcon}
+            alt="JavaScript icon"
+            width={500}
+            height={500}
+          />
+          <Image
+            className={styles.icon}
+            src={reactIcon}
+            alt="React icon"
+            width={500}
+            height={500}
+          />
+          <Image
+            className={styles.icon}
+            src={sassIcon}
+            alt="SASS icon"
+            width={500}
+            height={500}
+          />
+          <Image
+            className={styles.icon}
+            src={nextjsIcon}
+            alt="NextJS icon"
             width={500}
             height={500}
           />
