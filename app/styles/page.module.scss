@@ -1,11 +1,6 @@
 @use "./abstracts/mixins.scss";
 @use "./abstracts/variables.scss";
 
-.footerHome {
-  padding: 2% 0;
-  margin-bottom: 0;
-  background-color: variables.$primaryColor;
-}
 .main {
   height: 99.5dvh;
   @include mixins.flex(column, nowrap);
@@ -29,42 +24,55 @@
     border-radius: 8px;
     gap: 3px;
 
-    li {
+    .menuItemBox {
+      box-sizing: border-box;
       width: 49.5%;
       height: 180px;
-      box-sizing: border-box;
+      padding-bottom: 4%;
       background-color: variables.$surfaceColor;
       border: 1px solid variables.$surfaceBorderColor;
 
       .menuItem {
-        width: 65%;
+        box-sizing: border-box;
+        width: 100%;
         height: 100%;
         @include mixins.flex(column, nowrap);
         align-items: center;
-        justify-content: center;
+        justify-content: end;
         margin: 0 auto;
 
-        span {
-          font-weight: 500;
-          font-size: clamp(1rem, 2vw, 1.6rem);
+        .svg1 {
+          width: 55%;
+          max-width: 180px;
         }
 
-        .resumeTxt {
-          margin-top: -3%;
+        .svg2 {
+          width: 80%;
+          max-width: 120px;
+          position: relative;
+          top: 7px;
+        }
+
+        .svg3 {
+          width: 75%;
+          max-width: 130px;
+          position: relative;
+          bottom: 15px;
+        }
+
+        .aboutMeTxt {
+          font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+        }
+
+        .resumeTxt,
+        .portfolioTxt {
+          font-size: clamp(1rem, 1.8vw, 1.4rem);
         }
       }
     }
 
-    li:first-of-type {
+    .menuItemBox:first-of-type {
       width: 100%;
-
-      span {
-        font-size: clamp(1.15rem, 2vw, 1.6rem);
-      }
-    }
-
-    li:last-of-type a .menuItem {
-      gap: 9%;
     }
   }
 
@@ -80,7 +88,6 @@
     color: transparent;
     animation-name: subheaders;
     animation-duration: 1s;
-    // animation-delay: 3.3s;
     animation-fill-mode: forwards;
   }
 
@@ -102,6 +109,12 @@
       font-weight: 300;
     }
   }
+}
+
+.footerHome {
+  padding: 2% 0;
+  margin-bottom: 0;
+  background-color: variables.$primaryColor;
 }
 
 @keyframes h1Start {
@@ -143,7 +156,6 @@
   .menuBox {
     li:active {
       background-color: rgb(255, 255, 255);
-      // width: 50%;
       transition: 0.3s;
     }
   }
@@ -153,66 +165,43 @@
   .main {
     // In laptop screen the menu is not centered with justify-content: center
     .menuBox {
-      width: auto;
+      width: 90%;
       height: 62%;
 
-      li {
-        width: 28.7%;
+      .menuItemBox {
+        width: 32%;
         height: 100%;
-        margin: 0;
-        padding: 0;
+        padding-bottom: 6%;
         transition: 0.2s;
-      }
-
-      li:first-of-type {
-        width: 28.7%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
 
         .menuItem {
-          margin-top: 5px;
-          // position: relative;
-          // bottom: 25px;
-          // top: 21px;
-          // gap: 20px;
-
-          div {
-            width: 125%;
+          .svg1 {
+            width: 120%;
+            max-width: 380px;
             position: relative;
-            bottom: 9px;
-            display: flex;
-            justify-content: center;
+            bottom: 40px;
           }
 
-          span {
-            // margin: 0 auto;
+          .svg2 {
+            width: 100%;
+            max-width: 310px;
+            top: -3px;
+          }
+
+          .svg3 {
+            width: 100%;
+            max-width: 280px;
+            bottom: 60px;
           }
         }
       }
 
-      li:nth-of-type(2) .menuItem span {
-        position: relative;
-        top: 2px;
-      }
-
-      li:last-of-type .menuItem {
-        width: 62%;
-        position: relative;
-        top: 2px;
-
-        span {
-          position: relative;
-          top: 6px;
-        }
+      .menuItemBox:first-of-type {
+        width: 32%;
       }
 
       li:hover {
         background-color: rgb(255, 255, 255);
-        // border-top: 2px solid rgb(200, 200, 200);
-        // border-left: 2px solid rgb(200, 200, 200);
-        // border-right: 2px solid rgb(0, 0, 0);
-        // border-bottom: 2px solid rgb(0, 0, 0);
       }
 
       h1 {
@@ -222,9 +211,8 @@
         top: 0;
       }
     }
-
-    .footerHome {
-      padding: 0.5% 0;
-    }
+  }
+  .footerHome {
+    padding: 0.5%;
   }
 }

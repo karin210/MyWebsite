@@ -38,21 +38,35 @@ export default function Home() {
 
         {/* Menu Links */}
         <ul className={styles.menuBox}>
-          <li>
+          <li className={styles.menuItemBox}>
             <Link href={lang === "En" ? "/bio" : "/spanish/bio"}>
-              <article className={styles.menuItem}>
-                <Player
-                  autoplay
-                  loop
-                  src="https://assets2.lottiefiles.com/packages/lf20_8pL7DHZXvo.json"
-                  speed={1}
-                >
-                  <Controls
-                    visible={false}
-                    buttons={["play", "repeat", "frame", "debug"]}
-                  />
-                </Player>
-                {lang === "En" ? <span>About Me</span> : <span>Sobre Mí</span>}
+              <article className={`${styles.menuItem} ${styles.firstMenuItem}`}>
+                <div className={`${styles.svg} ${styles.svg1}`}>
+                  <Player
+                    autoplay
+                    loop
+                    src="https://assets2.lottiefiles.com/packages/lf20_8pL7DHZXvo.json"
+                    speed={1}
+                  >
+                    <Controls
+                      visible={false}
+                      buttons={["play", "repeat", "frame", "debug"]}
+                    />
+                  </Player>
+                </div>
+                {lang === "En" ? (
+                  <span
+                    className={`${styles.menuItemTxt} ${styles.aboutMeTxt}`}
+                  >
+                    About Me
+                  </span>
+                ) : (
+                  <span
+                    className={`${styles.menuItemTxt} ${styles.aboutMeTxt}`}
+                  >
+                    Sobre Mí
+                  </span>
+                )}
               </article>
             </Link>
           </li>
@@ -65,21 +79,27 @@ export default function Home() {
               }
             >
               <article className={styles.menuItem}>
-                <Player
-                  autoplay
-                  loop
-                  src="https://assets3.lottiefiles.com/packages/lf20_4DLPlW.json"
-                  speed={1}
-                >
-                  <Controls
-                    visible={false}
-                    buttons={["play", "repeat", "frame", "debug"]}
-                  />
-                </Player>
+                <div className={`${styles.svg} ${styles.svg2}`}>
+                  <Player
+                    autoplay
+                    loop
+                    src="https://assets3.lottiefiles.com/packages/lf20_4DLPlW.json"
+                    speed={1}
+                  >
+                    <Controls
+                      visible={false}
+                      buttons={["play", "repeat", "frame", "debug"]}
+                    />
+                  </Player>
+                </div>
                 {lang === "En" ? (
-                  <span className={styles.resumeTxt}>Resume</span>
+                  <span className={`${styles.menuItemTxt} ${styles.resumeTxt}`}>
+                    Resume
+                  </span>
                 ) : (
-                  <span className={styles.resumeTxt}>Currículum</span>
+                  <span className={`${styles.menuItemTxt} ${styles.resumeTxt}`}>
+                    Currículum
+                  </span>
                 )}
               </article>
             </Link>
@@ -87,21 +107,31 @@ export default function Home() {
           <li className={styles.menuItemBox}>
             <Link href={lang === "En" ? "/portfolio" : "/spanish/portafolio"}>
               <article className={styles.menuItem}>
-                <Player
-                  autoplay
-                  loop
-                  src="https://assets8.lottiefiles.com/private_files/lf30_6npzscwg.json"
-                  speed={1}
-                >
-                  <Controls
-                    visible={false}
-                    buttons={["play", "repeat", "frame", "debug"]}
-                  />
-                </Player>
+                <div className={`${styles.svg} ${styles.svg3}`}>
+                  <Player
+                    autoplay
+                    loop
+                    src="https://assets8.lottiefiles.com/private_files/lf30_6npzscwg.json"
+                    speed={1}
+                  >
+                    <Controls
+                      visible={false}
+                      buttons={["play", "repeat", "frame", "debug"]}
+                    />
+                  </Player>
+                </div>
                 {lang === "En" ? (
-                  <span>Portfolio</span>
+                  <span
+                    className={`${styles.menuItemTxt} ${styles.portfolioTxt}`}
+                  >
+                    Portfolio
+                  </span>
                 ) : (
-                  <span>Portafolio</span>
+                  <span
+                    className={`${styles.menuItemTxt} ${styles.portfolioTxt}`}
+                  >
+                    Portafolio
+                  </span>
                 )}
               </article>
             </Link>
