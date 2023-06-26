@@ -7,15 +7,15 @@ import Image from "next/image";
 // UI components
 
 // statics
-import htmlIcon from "../../../public/html-5-svgrepo-com.svg";
-import cssIcon from "../../../public/css-3-svgrepo-com.svg";
-import jsIcon from "../../../public/javascript-svgrepo-com.svg";
-import sassIcon from "../../../public/sass-svgrepo-com.svg";
-import reactIcon from "../../../public/react-javascript-js-framework-facebook-svgrepo-com.svg";
-import nextjsIcon from "../../../public/nextJS-svgrepo-com.svg";
-import astroIcon from "../../../public/astro-svgrepo-com.svg";
-import mongodbIcon from "../../../public/mongodb-svgrepo-com.svg";
-import nodejsIcon from "../../../public/nodejs-svgrepo-com.svg";
+import htmlIcon from "../../../public/HTMLLogo.svg";
+import cssIcon from "../../../public/CSSLogo.svg";
+import jsIcon from "../../../public/JSLogo.svg";
+import sassIcon from "../../../public/SassLogo.svg";
+import reactIcon from "../../../public/ReactLogo.svg";
+import nextjsIcon from "../../../public/NextJSLogo.svg";
+import astroIcon from "../../../public/AstroLogo.svg";
+import mongodbIcon from "../../../public/MongoDBLogo.svg";
+import nodejsIcon from "../../../public/NodeJSLogo.svg";
 
 export default function Portfolio() {
   return (

@@ -6,7 +6,7 @@ import React from "react";
 import Icon from "./components/Icon";
 import LinkedInIcon from "../../../../public/linkedin-svgrepo-com.svg";
 
-import GitHubIcon from "../../../../public/github-svgrepo-com.svg";
+import GitHubIcon from "../../../../public/GitHubLogo.svg";
 
 import EmailIcon from "../../../../public/email-address-svgrepo-com.svg";
 
