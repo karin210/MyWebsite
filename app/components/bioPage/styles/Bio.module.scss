@@ -13,21 +13,73 @@
   }
 
   .techStackBox {
-    padding: 4%;
+    padding: 5% 8%;
     @include mixins.flex(column, nowrap);
     gap: 20px;
-
     background-color: variables.$surfaceColor;
+    border: 1px solid variables.$surfaceBorderColor;
+    box-shadow: 0 0px 10px rgb(150, 150, 150);
 
-    h2 {
+    .stackH2::before {
+      content: "let";
+      font-weight: 300;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      position: relative;
+      right: 10px;
+      color: rgb(82, 80, 80);
+    }
+
+    .stackH2::after {
+      content: "=";
+      font-weight: 300;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      position: relative;
+      left: 10px;
+      color: rgb(82, 80, 80);
+    }
+
+    .stackH2 {
       font-size: clamp(1.1rem, 2vw, 1.8rem);
       text-align: center;
     }
   }
 
+  .bracket1 {
+    font-weight: 200;
+    font-size: 7rem;
+    position: relative;
+    right: 30px;
+    color: rgb(145, 145, 145);
+  }
+
   .iconsBox {
     @include mixins.flex(row, wrap);
-    gap: 25px;
+    justify-content: end;
+    margin-left: 20px;
+    gap: 30px;
+
+    .comma {
+      font-weight: 500;
+      font-size: 2.5rem;
+      position: relative;
+      top: 50px;
+      color: rgb(145, 145, 145);
+    }
+  }
+  .bracket2 {
+    font-weight: 200;
+    font-size: 7rem;
+    position: relative;
+    right: 25px;
+    color: rgb(145, 145, 145);
+  }
+  .bracket2::after {
+    content: ";";
+    font-weight: 230;
+    font-size: 7rem;
+    position: relative;
+    bottom: 10px;
+    color: rgb(145, 145, 145);
   }
 }
 

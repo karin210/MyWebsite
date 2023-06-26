@@ -12,6 +12,7 @@ export default function StackIcon({ src, alt, span }) {
         width={500}
         height={500}
       />
+
       <span>{span}</span>
     </div>
   );

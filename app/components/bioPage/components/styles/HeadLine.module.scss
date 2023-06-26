@@ -25,7 +25,6 @@
 
   .textBox {
     @include mixins.flex(column, nowrap);
-    // justify-content: center;
     gap: 10px;
   }
   h1 {
@@ -36,11 +35,10 @@
   }
 
   .semicolon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: relative;
-    top: 2px;
+    top: 1px;
     left: 13px;
-    // color: rgb(95, 93, 93);
   }
 
   p {
@@ -79,8 +77,8 @@
     }
 
     .semicolon {
-      font-size: 4rem;
-      top: 5px;
+      font-size: 3rem;
+      top: 2px;
     }
 
     .quotes1 {
