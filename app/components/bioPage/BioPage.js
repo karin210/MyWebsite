@@ -21,7 +21,7 @@ export default function Bio({ stackH2, children }) {
     <main className={styles.main}>
       <HeadLine />
       <section className={styles.techStackBox}>
-        <h2 className={styles.stackH2}>{stackH2}</h2>
+        <h2 className={styles.stackH2}>{stackH2}000</h2>
         <span className={styles.bracket1}>&#91;</span>
         <div className={styles.iconsBox}>
           <StackIcon src={html5Svg} alt="HTML5 icon" span="HTML5" />
