@@ -6,46 +6,88 @@
   padding: 3%;
   text-align: center;
   gap: 15px;
-  background-color: variables.$surfaceColor;
-  h1 {
-    font-size: 1rem;
-    margin: 0 auto;
+  // background-color: rgb(75, 114, 241);
+  cursor: pointer;
+
+  .bracket1,
+  .bracket2 {
+    font-size: 3rem;
+    color: rgb(117, 164, 252);
   }
 
-  p {
-    margin: 4%;
-    // padding: 3%;
-    font-size: 0.9rem;
-    // border-radius: 15px;
-    // background-color: rgb(240, 240, 240);
+  .bracket1 {
+    margin-right: 90%;
   }
-}
 
-@media (min-width: 714px) {
-  .headlineBox::after {
-    bottom: 107px;
+  .bracket2 {
+    margin-left: 95%;
   }
 
   .textBox {
-    width: 82%;
     @include mixins.flex(column, nowrap);
-    align-items: center;
-    position: relative;
-    top: 120px;
-    gap: 20px;
+    // justify-content: center;
+    gap: 10px;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: clamp(1.2rem, 3.5vw, 2.6rem);
+    margin-right: 90%;
+  }
 
+  .semicolon {
+    font-size: 2rem;
+    position: relative;
+    top: 2px;
+    left: 13px;
+    // color: rgb(95, 93, 93);
+  }
+
+  p {
+    font-weight: 300;
+    font-size: clamp(1rem, 3vw, 2rem);
+    margin: 4%;
+    color: rgb(82, 80, 80);
+  }
+}
+
+.quotes1,
+.quotes2 {
+  font-size: 3rem;
+  color: rgb(143, 143, 143);
+}
+
+.quotes1 {
+  position: relative;
+  top: 20px;
+  margin-right: 90%;
+}
+
+.quotes2 {
+  margin-left: 90%;
+}
+
+@media (min-width: 714px) {
+  .headlineBox {
+    .bracket1,
+    .bracket2 {
+      font-weight: 450;
+      font-size: 5rem;
+    }
     h1 {
-      font-size: 1.4rem;
-      text-align: start;
-      margin-left: 0;
+      margin: 0 auto;
     }
 
-    p {
-      font-size: 1.2rem;
-      margin: 0;
-      // margin-left: 0;
-      margin-right: 50px;
-      // text-align: start;
+    .semicolon {
+      font-size: 4rem;
+      top: 5px;
+    }
+
+    .quotes1 {
+      top: 60px;
+    }
+    .quotes1,
+    .quotes2 {
+      font-size: 6rem;
     }
   }
 }

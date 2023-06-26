@@ -141,12 +141,12 @@ export default function Home() {
           <h1 className={styles.h1}>Karin_Arroyo</h1>
           {lang === "En" ? (
             <div className={styles.subheaders}>
-              <h2>Frontend_Developer</h2>
+              <h2>&#60; Frontend_Developer /&#62; </h2>
               <h3>Website</h3>
             </div>
           ) : (
             <div className={styles.subheaders}>
-              <h2>Desarrollador_Frontend</h2>
+              <h2>&#60; Desarrollador_Frontend /&#62; </h2>
               <h3>Website</h3>
             </div>
           )}

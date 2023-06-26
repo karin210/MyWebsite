@@ -12,9 +12,15 @@ export default function HeadLine() {
   const isSpanish = url.includes("spanish");
   return (
     <section className={styles.headlineBox}>
-      <Photo />
+      {/* <Photo /> */}
+      <span className={styles.bracket1}>&#123;</span>
       <div className={styles.textBox}>
-        <h1>Carlos_Karin_Arroyo_Chagoya</h1>
+        <h1>
+          Carlos_Karin_Arroyo_Chagoya
+          <span className={styles.semicolon}>:</span>
+        </h1>
+
+        <span className={styles.quotes1}>&#8220;</span>
         {isSpanish ? (
           <p>
             Soy un desarrollador front-end autodidácta con un enorme interés por
@@ -29,7 +35,9 @@ export default function HeadLine() {
             I want to find a great team with whom grow along.
           </p>
         )}
+        <span className={styles.quotes2}>&#8221;</span>
       </div>
+      <span className={styles.bracket2}>&#125;</span>
     </section>
   );
 }
