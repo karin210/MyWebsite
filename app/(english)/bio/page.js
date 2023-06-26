@@ -38,7 +38,7 @@ export default function BioPage() {
           but I wanted learn how to code it. Finally found I needed to learn
           HTML, CSS and JavaScript to build a website, asked to a developer
           friend about it and he talked to me about the work in Tech, installed
-          Ubuntu in my laptop and helped me to start in web development"
+          Ubuntu in my laptop and helped me to start in web development."
         />
         <TextBlock
           textClassOpen={styles.textOpen3}

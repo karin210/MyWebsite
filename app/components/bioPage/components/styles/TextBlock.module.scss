@@ -5,7 +5,7 @@
   width: 100%;
   max-width: 500px;
   height: auto;
-  padding: 3%;
+  padding: 7%;
   border-radius: 8px;
   @include mixins.flex(column, nowrap);
   text-align: center;
@@ -15,12 +15,20 @@
   box-shadow: 0 1px 5px gray;
 
   h2 {
-    font-size: clamp(1.3rem, 1.5vw, 1.4rem);
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
     margin: 0 auto;
   }
 
   p {
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
-    line-height: 150%;
+    font-weight: 300;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    line-height: 170%;
+    // text-align: start;
+  }
+}
+
+@media (min-width: 714px) {
+  .sectionBox {
+    padding: 3.5% 3%;
   }
 }
