@@ -12,6 +12,8 @@ export default function BioPage() {
     <>
       <Bio stackH2="Tech_Stack">
         <TextBlock
+          textClassOpen={styles.textOpen1}
+          textClassClosed={styles.textClosed1}
           h="How_did_I_learn_code?"
           body="I was introduced into the web development by a developer friend in
         Guadalajara who teach me some basis of frontend development. I learn my
@@ -21,6 +23,8 @@ export default function BioPage() {
         courses in the platform of freecodecamp.org too."
         />
         <TextBlock
+          textClassOpen={styles.textOpen2}
+          textClassClosed={styles.textClosed2}
           h="Why_web_development?"
           body="I had no knowledge about the programming fields, I just wanted enter
           into the Tech industry. Before I'ad started reading about the
@@ -37,6 +41,8 @@ export default function BioPage() {
           Ubuntu in my laptop and helped me to start in web development"
         />
         <TextBlock
+          textClassOpen={styles.textOpen3}
+          textClassClosed={styles.textClosed3}
           h="Why_React?"
           body="I realized it's not possible to write complex and easy to mantain
           web apps just with Vanilla JavaScript. My friend considered that a

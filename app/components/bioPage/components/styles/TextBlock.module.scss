@@ -4,6 +4,7 @@
 .sectionBox {
   width: 100%;
   max-width: 500px;
+  height: auto;
   padding: 3%;
   @include mixins.flex(column, nowrap);
   text-align: center;

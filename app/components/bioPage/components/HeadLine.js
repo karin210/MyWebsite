@@ -16,7 +16,7 @@ export default function HeadLine() {
       <span className={styles.bracket1}>&#123;</span>
       <div className={styles.textBox}>
         <h1>
-          Carlos_Karin_Arroyo_Chagoya
+          Karin_Arroyo
           <span className={styles.semicolon}>:</span>
         </h1>
 
