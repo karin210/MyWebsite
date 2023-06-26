@@ -9,11 +9,6 @@ export default function TextBlock({ h, body, textClassOpen, textClassClosed }) {
     setOpen(!open);
   }
 
-  if (open) {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
   return (
     <section className={styles.sectionBox} onClick={handleClick}>
       <h2>{h}</h2>
