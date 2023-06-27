@@ -7,31 +7,35 @@ import React from "react";
 // UI components
 import NavItem from "./components/NavItem";
 // statics
-import homeIcon from "../../../public/home-svgrepo-com.svg";
-import folderIcon from "../../../public/folder-svgrepo-com.svg";
-import profileIcon from "../../../public/profile-round-1342-svgrepo-com.svg";
-import resumeIcon from "../../../public/resume-4-svgrepo-com.svg";
+import blueFolder from "../../../public/blueFolder.svg";
+import blueProfile from "../../../public/blueProfile.svg";
+import blackHome from "../../../public/blackHome.svg";
+import blackFolder from "../../../public/blackFolder.svg";
+import blackProfile from "../../../public/blackProfile.svg";
+import blackResume from "../../../public/blackResume.svg";
 
 export default function Nav() {
   const url = usePathname();
   const isSpanish = url.includes("spanish");
+  const inBio = url.includes("bio");
+  const inPortfolio = url.includes("portfolio") || url.includes("portafolio");
 
   return (
     <nav className={styles.navBox}>
-      <NavItem link="/" src={homeIcon} alt="Home Icon" />
+      <NavItem link="/" src={blackHome} alt="Home Icon" />
       <NavItem
         link={isSpanish ? "/spanish/bio" : "/bio"}
-        src={profileIcon}
+        src={inBio ? blueProfile : blackProfile}
         alt="Profile Icon"
       />
       <NavItem
         link={isSpanish ? "/spanish/portafolio" : "/portfolio"}
-        src={folderIcon}
+        src={inPortfolio ? blueFolder : blackFolder}
         alt="Portfolio Icon"
       />
       <NavItem
         link="https://drive.google.com/file/d/1Du8zEzC_UOjHdaaK-duZF1XeIgUli8a6/view?usp=sharing"
-        src={resumeIcon}
+        src={blackResume}
         alt="Resume Icon"
       />
     </nav>

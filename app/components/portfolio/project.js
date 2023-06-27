@@ -4,6 +4,8 @@ import styles from "./styles/Project.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+// statics
+import redirectIcon from "../../../public/redirect.svg";
 
 export default function Project({
   title,
@@ -20,20 +22,38 @@ export default function Project({
       <div className={styles.details}>
         <section className={styles.section}>
           <div className={styles.links}>
-            <Link href={siteLink}>
-              <span>Website</span>
+            <Link legacyBehavior href={siteLink}>
+              <a className={styles.link}>
+                <span>Website</span>
+                <Image
+                  className={styles.redirectIcon}
+                  src={redirectIcon}
+                  width={200}
+                  height={200}
+                  alt="redirect icon"
+                />
+              </a>
             </Link>
-            <Link href={codeLink}>
-              <span>Repo</span>
+            <Link legacyBehavior href={codeLink}>
+              <a className={styles.link}>
+                <span>Repo</span>
+                <Image
+                  className={styles.redirectIcon}
+                  src={redirectIcon}
+                  width={200}
+                  height={200}
+                  alt="redirect icon"
+                />
+              </a>
             </Link>
           </div>
         </section>
         <section className={styles.section}>
-          <h3 className={styles.descriptionH}>{descriptionH}</h3>
-          <p>{description}</p>
+          <h3 className={styles.descriptionH}>{descriptionH}:</h3>
+          <p className={styles.description}>{description}</p>
         </section>
-        <section className={styles.section}>
-          <h3>{madeWith}</h3>
+        <section className={`${styles.section} ${styles.stackSection}`}>
+          <h3 className={styles.madeWithH}>{madeWith}</h3>
           {children}
         </section>
       </div>

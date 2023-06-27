@@ -60,7 +60,7 @@
 
     .comma {
       font-weight: 500;
-      font-size: 2.5rem;
+      font-size: clamp(2.5rem, 5vw, 4rem);
       position: relative;
       top: 50px;
       color: rgb(145, 145, 145);
@@ -93,6 +93,12 @@
 
     .articlesBox {
       gap: 0;
+    }
+
+    .iconsBox {
+      .comma {
+        top: 65px;
+      }
     }
   }
 }

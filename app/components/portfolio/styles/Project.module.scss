@@ -22,19 +22,13 @@
     border: 1px solid rgb(240, 240, 240);
   }
 
-  section {
-    @include mixins.flex(column, nowrap);
-  }
-
   .section {
+    @include mixins.flex(column, nowrap);
     gap: 10px;
   }
 
-  h2 {
-    font-size: clamp(1.15rem, 2vw, 1.8rem);
-  }
-
   .title {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
     color: variables.$primaryColor;
   }
 
@@ -42,8 +36,44 @@
     @include mixins.flex(row, wrap);
     justify-content: space-around;
 
-    a {
-      color: rgb(59, 59, 255);
+    .link {
+      font-weight: 400;
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: rgb(15, 15, 167);
+    }
+
+    .redirectIcon {
+      width: 15px;
+      height: auto;
+      margin-left: 5px;
+    }
+  }
+
+  .madeWithH,
+  .descriptionH {
+    font-weight: 600;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+  }
+
+  .stackSection {
+    gap: 20px;
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+  }
+}
+
+@media (min-width: 714px) {
+  .projectBox {
+    padding: 2%;
+    .link {
+      padding: 3%;
+      border-radius: 8px;
+    }
+    .link:hover {
+      background-color: lightgray;
     }
   }
 }

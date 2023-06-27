@@ -3,7 +3,7 @@
 
 .navBox {
   width: 100%;
-  padding: clamp(10px, 3%, 20px) 0;
+
   @include mixins.flex(row, wrap);
   justify-content: space-around;
   position: fixed;
