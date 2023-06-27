@@ -7,14 +7,13 @@
   padding: 2% 0;
   @include mixins.flex(column, nowrap);
   justify-content: center;
-  margin-bottom: 14.5%;
   background-color: variables.$primaryColor;
+  margin-bottom: 70px;
 }
 
 @media (min-width: 714px) {
   // the footer must to be over the nav bar
   .footer {
     padding: 1% 0;
-    margin-bottom: 70px;
   }
 }
