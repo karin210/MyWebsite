@@ -6,6 +6,7 @@
   animation-name: controlsAppear;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  user-select: none;
 }
 
 .form {
@@ -21,7 +22,6 @@
   animation-name: controlsAppear;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
-  touch-action: none;
 
   label {
     width: 100%;
