@@ -21,6 +21,7 @@
   animation-name: controlsAppear;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
+  touch-action: none;
 
   label {
     width: 100%;
