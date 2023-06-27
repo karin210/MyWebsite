@@ -3,9 +3,12 @@
 
 .navBox {
   width: 100%;
+  height: 70px;
+  overflow: hidden;
 
   @include mixins.flex(row, wrap);
   justify-content: space-around;
+  align-content: center;
   position: fixed;
   bottom: 0;
   background-color: variables.$surfaceColor;

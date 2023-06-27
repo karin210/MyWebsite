@@ -1,16 +1,16 @@
 // css
-import styles from "./styles/BioPage.module.scss";
+import styles from "./styles/about-me.module.scss";
 // system components
 import Image from "next/image";
 import React from "react";
 // UI components
-import Bio from "@/app/components/bioPage/BioPage";
-import TextBlock from "@/app/components/bioPage/components/textBlock";
+import AboutMe from "@/app/components/aboutMe/AboutMe";
+import TextBlock from "@/app/components/aboutMe/components/textBlock";
 
-export default function BioPage() {
+export default function aboutMePage() {
   return (
     <>
-      <Bio stackH2="Tech_Stack">
+      <AboutMe stackH2="Tech_Stack">
         <TextBlock
           textClassOpen={styles.textOpen1}
           textClassClosed={styles.textClosed1}
@@ -52,7 +52,7 @@ export default function BioPage() {
           by Meta, has a large community and pretty much tools to work with so I
           chose it."
         />
-      </Bio>
+      </AboutMe>
     </>
   );
 }

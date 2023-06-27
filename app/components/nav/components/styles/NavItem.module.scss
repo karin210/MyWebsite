@@ -1,6 +1,11 @@
+@use "../../../../styles/abstracts/mixins.scss";
 .link {
+  @include mixins.flex(column, nowrap);
   padding: clamp(10px, 3%, 20px);
   border-radius: 40%;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
 }
 .link:active {
   background-color: lightgray;
@@ -10,11 +15,20 @@
   height: auto;
 }
 
+.text {
+  font-weight: 300;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
 @media (min-width: 714px) {
   .link:hover {
     background-color: lightgray;
   }
   .img {
-    width: 40px;
+    // width: 30px;
+  }
+
+  .text {
+    font-weight: 400;
   }
 }

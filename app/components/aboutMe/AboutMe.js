@@ -1,11 +1,11 @@
 // css
-import styles from "./styles/Bio.module.scss";
+import styles from "./styles/AboutMe.module.scss";
 // system components
 import Image from "next/image";
 import React from "react";
 // UI components
-import HeadLine from "@/app/components/bioPage/components/HeadLine";
-import StackIcon from "@/app/components/bioPage/components/stackIcon";
+import HeadLine from "@/app/components/aboutMe/components/HeadLine";
+import StackIcon from "@/app/components/aboutMe/components/stackIcon";
 // statics
 import html5Svg from "../../../public/blueHTML.svg";
 import css3Svg from "../../../public/blueCSS.svg";
@@ -16,7 +16,7 @@ import nextjsSvg from "../../../public/blueNextjs.svg";
 import gitSvg from "../../../public/blueGit.svg";
 import linuxSvg from "../../../public/blueLinux.svg";
 
-export default function Bio({ stackH2, children }) {
+export default function AboutMe({ stackH2, children }) {
   return (
     <main className={styles.main}>
       <HeadLine />

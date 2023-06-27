@@ -39,7 +39,7 @@ export default function Home() {
         {/* Menu Links */}
         <ul className={styles.menuBox}>
           <li className={styles.menuItemBox}>
-            <Link href={lang === "En" ? "/bio" : "/spanish/bio"}>
+            <Link href={lang === "En" ? "/about-me" : "/spanish/sobre-mi"}>
               <article className={`${styles.menuItem} ${styles.firstMenuItem}`}>
                 <div className={`${styles.svg} ${styles.svg1}`}>
                   <Player

@@ -1,16 +1,16 @@
 // css
-import styles from "./styles/BioPage.module.scss";
+import styles from "./styles/sobre-mi.module.scss";
 // system components
 import Image from "next/image";
 import React from "react";
 // UI components
-import Bio from "../../components/bioPage/BioPage";
-import TextBlock from "../../components/bioPage/components/textBlock";
+import AboutMe from "../../components/aboutMe/AboutMe";
+import TextBlock from "../../components/aboutMe/components/textBlock";
 
-export default function BioPage() {
+export default function sobreMiPage() {
   return (
     <>
-      <Bio stackH2="Stack_Tecnológico">
+      <AboutMe stackH2="Stack_Tecnológico">
         <TextBlock
           textClassOpen={styles.textOpen1}
           textClassClosed={styles.textClosed1}
@@ -35,7 +35,7 @@ export default function BioPage() {
           h="¿Por_qué_React?"
           body="Me dí cuenta de que no era posible escribir código complejo y aplicaciones web fáciles de mantener solo con Vanilla JavaScript. Mi amigo pensó que una buena herramienta para comenzar a hacer aplicaciones web era React, entonces investigué acerca de frameworks y librerías. Svelte fué otra opción que mi amigo me suguirió, pero React es más popular, además está respaldado por Meta, tiene una comunidad muy grande y bastantes herramientas de terceros para trabajar, así que la elegí."
         />
-      </Bio>
+      </AboutMe>
     </>
   );
 }
