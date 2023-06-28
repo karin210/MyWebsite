@@ -30,9 +30,9 @@ export default function HeadLine() {
           </p>
         ) : (
           <p>
-            I&apos;m a self-though front-end developer with a long interest on
-            web development and Tech aiming to become in a Full-Stack developer.
-            I want to find a great team with whom grow along.
+            I&apos;m a self-though front-end developer highly interested on web
+            development and technology. Aiming to become in a Full-Stack
+            developer. I want to find a great team with whom grow together.
           </p>
         )}
         <span className={styles.quotes2}>&#8221;</span>

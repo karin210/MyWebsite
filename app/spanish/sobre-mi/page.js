@@ -17,7 +17,7 @@ export default function sobreMiPage() {
           h="¿Cómo_aprendí_código?"
           body="Empecé en el desarrollo web con ayuda de un amigo en
         Guadalajara quien me enseño algunas bases de desarrollo frontend. Mis principales habilidades las aprendí gracias a sitios como w3schools.com,
-        developer.mozilla.org, la documetación oficial de tecnologías como React y Next.js, y algunos canales de YouTube sobre programación. Hice algunos cursos en la plataforma de freecodecamp.org también."
+        developer.mozilla.org, la documetación oficial de tecnologías como React y Next.js, y algunos canales de YouTube sobre programación. Tomé algunos cursos en la plataforma de freecodecamp.org también."
         />
         <TextBlock
           textClassOpen={styles.textOpen2}

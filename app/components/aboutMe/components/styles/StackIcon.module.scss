@@ -5,7 +5,6 @@
   width: min-content;
   @include mixins.flex(column, nowrap);
   align-items: center;
-  margin: 0 auto;
   gap: 10px;
 
   span {
