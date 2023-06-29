@@ -76,7 +76,7 @@ export default function Home() {
               href={
                 lang === "En"
                   ? "https://drive.google.com/file/d/1TmEKG1vnPwZc6M1WcId-_dy29Pt5uN90/view?usp=sharing"
-                  : "https://drive.google.com/file/d/1TmEKG1vnPwZc6M1WcId-_dy29Pt5uN90/view?usp=sharing"
+                  : "https://drive.google.com/file/d/1R2gynnFFpHAok8aERAE-lPWAtru6lrib/view?usp=sharing"
               }
             >
               <a target="_blank">

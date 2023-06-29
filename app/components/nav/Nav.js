@@ -41,7 +41,11 @@ export default function Nav() {
         text={isSpanish ? "Portafolio" : "Portfolio"}
       />
       <NavItem
-        link="https://drive.google.com/file/d/1TmEKG1vnPwZc6M1WcId-_dy29Pt5uN90/view?usp=sharing"
+        link={
+          isSpanish
+            ? "https://drive.google.com/file/d/1R2gynnFFpHAok8aERAE-lPWAtru6lrib/view?usp=sharing"
+            : "https://drive.google.com/file/d/1TmEKG1vnPwZc6M1WcId-_dy29Pt5uN90/view?usp=sharing"
+        }
         src={blackResume}
         alt="Resume Icon"
         text={isSpanish ? "Currículum" : "Resume"}
