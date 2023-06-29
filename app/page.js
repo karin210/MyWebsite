@@ -72,36 +72,43 @@ export default function Home() {
           </li>
           <li className={styles.menuItemBox}>
             <Link
+              legacyBehavior
               href={
                 lang === "En"
                   ? "https://drive.google.com/file/d/1TmEKG1vnPwZc6M1WcId-_dy29Pt5uN90/view?usp=sharing"
                   : "https://drive.google.com/file/d/1TmEKG1vnPwZc6M1WcId-_dy29Pt5uN90/view?usp=sharing"
               }
             >
-              <article className={styles.menuItem}>
-                <div className={`${styles.svg} ${styles.svg2}`}>
-                  <Player
-                    autoplay
-                    loop
-                    src="https://assets3.lottiefiles.com/packages/lf20_4DLPlW.json"
-                    speed={1}
-                  >
-                    <Controls
-                      visible={false}
-                      buttons={["play", "repeat", "frame", "debug"]}
-                    />
-                  </Player>
-                </div>
-                {lang === "En" ? (
-                  <span className={`${styles.menuItemTxt} ${styles.resumeTxt}`}>
-                    Resume
-                  </span>
-                ) : (
-                  <span className={`${styles.menuItemTxt} ${styles.resumeTxt}`}>
-                    Currículum
-                  </span>
-                )}
-              </article>
+              <a target="_blank">
+                <article className={styles.menuItem}>
+                  <div className={`${styles.svg} ${styles.svg2}`}>
+                    <Player
+                      autoplay
+                      loop
+                      src="https://assets3.lottiefiles.com/packages/lf20_4DLPlW.json"
+                      speed={1}
+                    >
+                      <Controls
+                        visible={false}
+                        buttons={["play", "repeat", "frame", "debug"]}
+                      />
+                    </Player>
+                  </div>
+                  {lang === "En" ? (
+                    <span
+                      className={`${styles.menuItemTxt} ${styles.resumeTxt}`}
+                    >
+                      Resume
+                    </span>
+                  ) : (
+                    <span
+                      className={`${styles.menuItemTxt} ${styles.resumeTxt}`}
+                    >
+                      Currículum
+                    </span>
+                  )}
+                </article>
+              </a>
             </Link>
           </li>
           <li className={styles.menuItemBox}>
